@@ -95,11 +95,11 @@
                             </div>
                         </div>
                         <div class="form-check form-check-inline mb-4 mr-5">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <input class="form-check-input" type="radio" name="sexy" id="inlineRadio1" value="male" <?=(isset($_POST['sexy']) && $_POST['sexy'] == 'male')? 'checked' : ''?>>
                             <label class="form-check-label" for="inlineRadio1">Homme</label>
                         </div>
                         <div class="form-check form-check-inline mb-4">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <input class="form-check-input" type="radio" name="sexy" id="inlineRadio2" value="female" <?=(isset($_POST['sexy']) && $_POST['sexy'] == 'female')? 'checked' : ''?>>
                             <label class="form-check-label" for="inlineRadio2">Femme</label>
                         </div>
                         <div class="form-group row mb-4">
