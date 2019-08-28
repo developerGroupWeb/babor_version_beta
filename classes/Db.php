@@ -17,6 +17,7 @@ class Db
         $error = false,
         $results,
         $count = 0;
+
     private function __construct()
     {
         try
@@ -39,6 +40,12 @@ class Db
         }
         return self::$instance;
     }
+
+    /**
+     * @param $sql
+     * @param array $params
+     * @return $this
+     */
     function query($sql, $params = [])
     {
         $this->error = false;
@@ -64,6 +71,12 @@ class Db
         return $this;
     }
 
+    /**
+     * @param $action
+     * @param $table
+     * @param array $where
+     * @return $this|bool
+     */
     private function action($action, $table, $where = []){
 
         if(count($where) === 3){
@@ -91,6 +104,11 @@ class Db
         return $this->action('SELECT *', $table, $where);
     }
 
+    /**
+     * @param $table
+     * @param array $fields
+     * @return bool
+     */
     function insert($table, $fields = []){
 
         $keys   = array_keys($fields);
@@ -118,6 +136,12 @@ class Db
         return false;
     }
 
+    /**
+     * @param $table
+     * @param $id
+     * @param $fields
+     * @return bool
+     */
     function update($table, $id, $fields){
 
         $set = '';
@@ -145,27 +169,42 @@ class Db
         return false;
     }
 
+    /**
+     * @return mixed
+     */
     function results(){
 
         return $this->results;
     }
 
+    /**
+     * @return mixed
+     */
     function first(){
 
         return $this->results()[0];
     }
 
-
+    /**
+     * @param $table
+     * @param $where
+     * @return bool|Db
+     */
     function delete($table, $where){
         return $this->action('DELETE', $table, $where);
     }
+
+    /**
+     * @return int
+     */
     function count(){
 
         return $this->count;
     }
 
-
-
+    /**
+     * @return bool
+     */
     function error()
     {
         return $this->error;

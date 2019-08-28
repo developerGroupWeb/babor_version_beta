@@ -14,6 +14,6 @@ if(isset($_POST['submit'])){
     $validate->password('password');
     $validate->remember('remember');
 
-    var_dump($validate->success());
+    //var_dump($validate->success());
 }
 

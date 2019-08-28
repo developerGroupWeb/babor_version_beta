@@ -357,7 +357,6 @@ class Validator extends Book
     }
     public function success(){
 
-
     }
 
     /**
