@@ -6,6 +6,7 @@ use http\Cookie;
 class Validator extends Book
 {
     private $errors =  array();
+    private $success =  array();
     public $months  = [1 => "Janvier", "Février",  "Mars",  "Avril", "Mai", "Juin",  "Juillet", "Août",  "Septembre", "Octobre", "Novembre", "Décembre"];
 
     /**
@@ -100,7 +101,7 @@ class Validator extends Book
 
             if($this->preg_number($value) == 1){
 
-                $this->errors["success"] = "true";
+                $this->success[$name] .= "true";
                 return $value;
             }else{
 
@@ -353,6 +354,10 @@ class Validator extends Book
     public function error(string $name){
 
         if(isset($this->errors[$name])) return $this->errors[$name];
+    }
+    public function success(){
+
+
     }
 
     /**

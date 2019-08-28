@@ -13,5 +13,7 @@ if(isset($_POST['submit'])){
     $validate->email_or_phone('email_or_phone');
     $validate->password('password');
     $validate->remember('remember');
+
+    var_dump($validate->success());
 }
 
