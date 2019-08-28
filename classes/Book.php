@@ -168,7 +168,7 @@ class Book
         $timestamp = time() + $nday*24*3600;
 
         $weeks  = ["Dimanche", "Lundi" ,"Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
-        $months  = [1 => "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Décembre"];
+        $months  = [1 => "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
 
         $date = ["date" => $weeks[date("w", $timestamp)].' '.date("j", $timestamp).' '.$months[date("n", $timestamp)].' '.date("Y", $timestamp),
             "hour" => date("H:i:s", $timestamp)

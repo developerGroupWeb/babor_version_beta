@@ -51,46 +51,48 @@
                     <form class="col-sm-12" method="post" action="">
                         <div class="form-group row mb-4">
                             <div class="col-sm-12">
-                                <input type="text" name="Prénom" class="row form-control" id="name" value="<?= $validate->post('Prénom')?>" placeholder="Prénom">
+                                <input type="text" name="Prénom" class="row form-control" id="name" value="<?= $validate->post('Prénom')?>" placeholder="Prénom" pattern="^-?[a-zA-Z\ ]+$"/>
                                 <span class="text-danger font-italic"><?= $validate->error("Prénom")?></span>
                             </div>
                         </div>
                         <div class="form-group row mb-4">
                             <div class="col-sm-4">
-                                <select class="row form-control">
+                                <select name="day" class="row form-control" style="<?= ($validate->error('day')) ? "border-color : red" : ''?>">
                                     <option>Jour...</option>
-                                    <?php
-                                      for($i = 1; $i <= 31; $i++){?>
-                                    <option value="<?=$i?>"><?=$i?></option>
-                                    <?php
-                                      }
+
+                                    <?php for($i = 1; $i <= 31; $i++)
+                                    {
                                     ?>
+                                        <option value="<?=$i?>" <?=(isset($_POST['day']) && $_POST['day'] == $i)? 'selected = selected' : ''?>><?=$i?></option>
+                                    <?php
+                                    }
+                                    ?>
+
                                 </select>
                             </div>
+
                             <div class="col-sm-4">
-                                <select class="row form-control">
+                                <select class="row form-control" name="month" style="<?= ($validate->error('month')) ? "border-color : red" : ''?>">
                                     <option>Mois...</option>
-                                    <option>janvier</option>
-                                    <option>février</option>
-                                    <option>mars</option>
-                                    <option>avril</option>
-                                    <option>mai</option>
-                                    <option>juin</option>
-                                    <option>juillet</option>
-                                    <option>août</option>
-                                    <option>septembre</option>
-                                    <option>octobre</option>
-                                    <option>novembre</option>
-                                    <option>décembre</option>
+
+                                    <?php foreach ($validate->months as $key => $month)
+                                    {
+                                    ?>
+                                        <option value="<?=$key?>" <?=(isset($_POST['month']) && $_POST['month'] == $key)? 'selected = selected' : ''?>><?=$month?></option>
+                                    <?php
+                                    }
+                                    ?>
+
                                 </select>
                             </div>
                             <div class="col-sm-4">
-                                <input type="text" class="row form-control" id="name" placeholder="Année...">
+                                <input type="number" name="year" class="row form-control" id="year" placeholder="Année..." value="<?= $validate->post('year')?>" pattern="^(19|20)[0-9]{2}" style="<?= ($validate->error('year')) ? "border-color : red" : ''?>"/>
                             </div>
                         </div>
                         <div class="form-group row mb-4">
                             <div class="col-sm-12">
-                                <input type="search" class="row form-control" id="name" placeholder="Saisir ton emplacement">
+                                <input type="search" name="location" class="row form-control" id="location" placeholder="Saisir ton emplacement"  value="<?= $validate->post('location')?>">
+                                <span class="text-danger font-italic"><?= $validate->error("location")?></span>
                                 <small id="emailHelp" class="form-text text-muted ml-3">p. ex. cotonou, Benin</small>
                             </div>
                         </div>
@@ -102,19 +104,23 @@
                             <input class="form-check-input" type="radio" name="sexy" id="inlineRadio2" value="female" <?=(isset($_POST['sexy']) && $_POST['sexy'] == 'female')? 'checked' : ''?>>
                             <label class="form-check-label" for="inlineRadio2">Femme</label>
                         </div>
+                        <span class="text-danger font-italic"><?= $validate->error("sexy")?></span>
+
                         <div class="form-group row mb-4">
                             <div class="col-sm-12">
-                                <input type="email" class="row form-control" id="email" placeholder="E-mail ou numéro de téléphone">
+                                <input type="text" name="email_or_phone" class="row form-control" id="email" placeholder="E-mail ou numéro de téléphone" value="<?= $validate->post('email_or_phone')?>" />
+                                <span class="text-danger font-italic"><?= $validate->error("email_or_phone")?></span>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12">
-                                <input type="password" class="row form-control" id="password" placeholder="Crée ton mot de passe">
+                                <input type="password" name="password" class="row form-control" id="password" placeholder="Crée ton mot de passe" value="<?= $validate->post('password')?>"/>
+                                <span class="text-danger font-italic"><?= $validate->error("password")?></span>
                                 <small id="emailHelp" class="form-text text-muted ml-3">Le mot de passe doit comprendre au moins 5 caractères</small>
                             </div>
                         </div>
                         <div class="form-check my-4" style="margin-left: 100px;">
-                            <input class="form-check-input" type="checkbox" value="" id="check">
+                            <input class="form-check-input" type="checkbox" name="remember" value="1" id="check">
                             <label class="form-check-label" for="check">
                                 Se souvenir de moi
                             </label>

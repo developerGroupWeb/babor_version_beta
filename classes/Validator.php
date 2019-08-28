@@ -1,9 +1,12 @@
 <?php
 
 
+use http\Cookie;
+
 class Validator extends Book
 {
     private $errors =  array();
+    public $months  = [1 => "Janvier", "Février",  "Mars",  "Avril", "Mai", "Juin",  "Juillet", "Août",  "Septembre", "Octobre", "Novembre", "Décembre"];
 
     /**
      * @param string $email
@@ -56,6 +59,15 @@ class Validator extends Book
 
         return $msg;
     }
+    function preg_int(string $num){
+       $pattern = "/^[0-9]+$/";
+       if (preg_match($pattern, $num)){
+           $msg = 1;
+       }else{
+           $msg = 0;
+       }
+       return $msg;
+    }
 
     /**
      * @param string $name
@@ -76,9 +88,9 @@ class Validator extends Book
     }
 
 
-
     /**
      * @param string $name
+     * @return string
      */
     public function phone(string $name){
 
@@ -89,6 +101,7 @@ class Validator extends Book
             if($this->preg_number($value) == 1){
 
                 $this->errors["success"] = "true";
+                return $value;
             }else{
 
                 $this->errors[$name] = "Your number is incorrect.<br/> Ex +380633471236";
@@ -117,7 +130,141 @@ class Validator extends Book
             }
         }else{
 
-            $this->errors [$name] = "Field $name is required";
+            $this->errors[$name] = "Field $name is required";
+        }
+    }
+
+    /**
+     * @param string $name
+     */
+    public function select_day(string $name){
+        $value = $this->post($name);
+
+        if($this->preg_int($value) === 1){
+            $this->errors['success'] = 'true';
+        }else{
+            $this->errors[$name] = "Field $name is required";
+        }
+    }
+
+    /**
+     * @param string $name
+     */
+    public function select_month(string $name){
+
+        $value = $this->post($name);
+
+        if(array_key_exists($value, $this->months) == true){
+
+            if($this->preg_int($value) === 1){
+                $this->errors['success'] = 'true';
+            }else{
+                $this->errors[$name] = "Field $name is required";
+            }
+        }else{
+            $this->errors[$name] = "The value of the field must not be changed";
+        }
+    }
+
+    public function select_year(string $name){
+        $value = $this->post($name);
+
+        $pattern  = "/^(19|20)[0-9]{2}/";
+
+        if($value !== ''){
+
+            if(preg_match($pattern, $value) === 1){
+
+                if($value < 2012){
+                    $this->errors['success'] = 'true';
+                }else{
+
+                    $this->errors[$name] = "Field $name is incorrect";
+                }
+            }else{
+
+                $this->errors[$name] = "Field $name is incorrect";
+            }
+        }else{
+            $this->errors[$name] = "Field $name is required";
+        }
+
+    }
+
+    public function emplacement(string $name){
+        $value = $this->post($name);
+
+        $pattern = "/^[a-zA-Z ,]+$/";
+
+        if($value !== ''){
+
+            if(preg_match($pattern, $value) === 1){
+
+                $location = explode(',', $value);
+                $city = ucfirst($location[0]);
+                $country = strtoupper(end($location));
+                return [$city, $country];
+
+            }else{
+                $this->errors[$name] = "Field $name is incorrect";
+            }
+        }else{
+            $this->errors[$name] = "Field $name is required";
+        }
+    }
+
+    public function radio($name){
+        $value = $this->post($name);
+        $option = ['male' => 'Male', 'female' => 'Female'];
+
+        if($value !== null){
+
+            if(array_key_exists($value, $option) == true){
+                $this->errors["success"] = "true";
+            }else{
+                $this->errors[$name] = "The value of the field must not be changed";
+            }
+        }else{
+            $this->errors[$name] = "Field $name is required";
+        }
+    }
+
+    public function email_or_phone($name){
+        $value = $this->post($name);
+        $pattern = "/^[0-9 +]+$/";
+
+        if($value !== ''){
+
+            if(preg_match($pattern, $value)){
+                $this->phone($name);
+            }else{
+                $this->email($name);
+            }
+        }else{
+            $this->errors[$name] = "Field $name is required";
+        }
+    }
+
+    public function password($name){
+        $value = $this->post($name);
+        if($value !== ''){
+            if($value >= 5){
+               return sha1($value);
+            }else{
+                $this->errors[$name] = "Password must be at least 5 characters long";
+            }
+        }else{
+            $this->errors[$name] = "Field $name is required";
+        }
+    }
+
+    /**
+     * @param $name
+     */
+    public function remember($name){
+        $value = $this->post($name);
+        if($value == 1){
+            setcookie('remember', 'true', time() + 3600);
         }
     }
 
@@ -177,6 +324,7 @@ class Validator extends Book
 
     /**
      * @param string $name
+     * @return string
      */
     public function email(string $name){
 
@@ -187,6 +335,7 @@ class Validator extends Book
             if($this->preg_email($value) == 1){
 
                 $this->errors["success"] = "true";
+                return $value;
             }else{
 
                 $this->errors[$name] = "Your email is incorrect";
