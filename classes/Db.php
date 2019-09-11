@@ -18,7 +18,7 @@ class Db
         $results,
         $count = 0;
 
-    private function __construct()
+    public function __construct()
     {
         try
         {

@@ -115,6 +115,7 @@ class Validator extends Book
 
     /**
      * @param string $name
+     * @return string
      */
     public function text(string $name){
 
@@ -124,7 +125,8 @@ class Validator extends Book
 
             if($this->preg_string($value) == 1){
 
-                $this->errors["success"] = "true";
+                $this->success[$name] = "true";
+                return $value;
             }else{
 
                 $this->errors[$name] = "Your $name contains characters  not allowed";
@@ -137,12 +139,14 @@ class Validator extends Book
 
     /**
      * @param string $name
+     * @return string
      */
     public function select_day(string $name){
         $value = $this->post($name);
 
         if($this->preg_int($value) === 1){
-            $this->errors['success'] = 'true';
+            $this->success[$name] = "true";
+            return $value;
         }else{
             $this->errors[$name] = "Field $name is required";
         }
@@ -150,6 +154,7 @@ class Validator extends Book
 
     /**
      * @param string $name
+     * @return string
      */
     public function select_month(string $name){
 
@@ -158,7 +163,8 @@ class Validator extends Book
         if(array_key_exists($value, $this->months) == true){
 
             if($this->preg_int($value) === 1){
-                $this->errors['success'] = 'true';
+                $this->success[$name] = "true";
+                return $value;
             }else{
                 $this->errors[$name] = "Field $name is required";
             }
@@ -167,6 +173,10 @@ class Validator extends Book
         }
     }
 
+    /**
+     * @param string $name
+     * @return string
+     */
     public function select_year(string $name){
         $value = $this->post($name);
 
@@ -177,7 +187,8 @@ class Validator extends Book
             if(preg_match($pattern, $value) === 1){
 
                 if($value < 2012){
-                    $this->errors['success'] = 'true';
+                    $this->success[$name] = "true";
+                    return $value;
                 }else{
 
                     $this->errors[$name] = "Field $name is incorrect";
@@ -192,6 +203,10 @@ class Validator extends Book
 
     }
 
+    /**
+     * @param string $name
+     * @return string
+     */
     public function emplacement(string $name){
         $value = $this->post($name);
 
@@ -204,7 +219,10 @@ class Validator extends Book
                 $location = explode(',', $value);
                 $city = ucfirst($location[0]);
                 $country = strtoupper(end($location));
-                return [$city, $country];
+
+                $this->success[$name] = "true";
+                //return [$city, $country];
+                return  $value;
 
             }else{
                 $this->errors[$name] = "Field $name is incorrect";
@@ -214,6 +232,10 @@ class Validator extends Book
         }
     }
 
+    /**
+     * @param $name
+     * @return string
+     */
     public function radio($name){
         $value = $this->post($name);
         $option = ['male' => 'Male', 'female' => 'Female'];
@@ -221,7 +243,8 @@ class Validator extends Book
         if($value !== null){
 
             if(array_key_exists($value, $option) == true){
-                $this->errors["success"] = "true";
+                $this->success[$name] = "true";
+                return $value;
             }else{
                 $this->errors[$name] = "The value of the field must not be changed";
             }
@@ -229,6 +252,7 @@ class Validator extends Book
             $this->errors[$name] = "Field $name is required";
         }
     }
+
 
     public function email_or_phone($name){
         $value = $this->post($name);
@@ -250,6 +274,8 @@ class Validator extends Book
         $value = $this->post($name);
         if($value !== ''){
             if($value >= 5){
+
+                $this->success[$name] = "true";
                return sha1($value);
             }else{
                 $this->errors[$name] = "Password must be at least 5 characters long";
@@ -300,7 +326,8 @@ class Validator extends Book
 
                     if(move_uploaded_file($tmp_name, $storage) == TRUE){
 
-                        $this->errors["success"] = "true";
+                        $this->success[$name] = "true";
+                        return $new_name;
 
                         //return "The file has been downloaded successfully";
                     }else{
@@ -335,7 +362,7 @@ class Validator extends Book
 
             if($this->preg_email($value) == 1){
 
-                $this->errors["success"] = "true";
+                $this->success[$name] = "true";
                 return $value;
             }else{
 
@@ -347,6 +374,7 @@ class Validator extends Book
 
     }
 
+
     /**
      * @param string $name
      * @return mixed
@@ -355,8 +383,12 @@ class Validator extends Book
 
         if(isset($this->errors[$name])) return $this->errors[$name];
     }
-    public function success(){
 
+    /**
+     * @return array
+     */
+    public function success(){
+         return $this->success;
     }
 
     /**

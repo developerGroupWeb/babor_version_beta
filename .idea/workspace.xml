@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16d3b538-3a4a-4a18-b97f-b91bbc0598fc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Db.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/Validator.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Validator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/register.php" afterDir="false" />
@@ -60,7 +61,9 @@
       <option name="presentableId" value="Default" />
       <updated>1566844297272</updated>
       <workItem from="1566844299297" duration="3303000" />
-      <workItem from="1566937197027" duration="28495000" />
+      <workItem from="1566937197027" duration="29612000" />
+      <workItem from="1567188727350" duration="2535000" />
+      <workItem from="1568120975569" duration="4937000" />
     </task>
     <servers />
   </component>
@@ -72,7 +75,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
