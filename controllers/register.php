@@ -3,9 +3,9 @@
 $validate = new Validator;
 
 //print_r($_COOKIE);
-if(isset($_POST['submit'])){
+if(isset($_POST['register'])){
 
-    $validate->text('Prénom');
+    $validate->text('name');
     $validate->select_day('day');
     $validate->select_month('month');
     $validate->select_year('year');
@@ -15,10 +15,11 @@ if(isset($_POST['submit'])){
     $validate->password('password');
     $validate->remember('remember');
 
-    if(sizeof($validate->success()) === 8){
+
+    if($validate->success() === 'success'){
         $insert = new Db();
         $result = $insert->insert('users', [
-                                        $validate->text('Prénom'),
+                                        $validate->text('name'),
                                         $validate->select_day('day'),
                                         $validate->select_month('month'),
                                         $validate->select_year('year'),
@@ -27,8 +28,8 @@ if(isset($_POST['submit'])){
                                         $validate->email_or_phone('email_or_phone'),
                                         $validate->password('password')
             ]);
-        var_dump($result);
-        //header('Location:?view=login');
+        //var_dump($result);
+        header('Location:?view=login');
     }
 }
 

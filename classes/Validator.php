@@ -6,7 +6,6 @@ use http\Cookie;
 class Validator extends Book
 {
     private $errors =  array();
-    private $success =  array();
     public $months  = [1 => "Janvier", "Février",  "Mars",  "Avril", "Mai", "Juin",  "Juillet", "Août",  "Septembre", "Octobre", "Novembre", "Décembre"];
 
     /**
@@ -32,7 +31,7 @@ class Validator extends Book
      */
     function preg_string(string $string){
 
-        $pattern = "/^-?[a-zA-Z\ ]+$/";
+        $pattern = "/^-?[a-zA-Zéèêëíìîïñóòôöõúùûüýÿæ -\ ]+$/";
         if(preg_match($pattern, $string) == 1){
 
             $msg = 1;
@@ -101,7 +100,6 @@ class Validator extends Book
 
             if($this->preg_number($value) == 1){
 
-                $this->success[$name] .= "true";
                 return $value;
             }else{
 
@@ -125,7 +123,6 @@ class Validator extends Book
 
             if($this->preg_string($value) == 1){
 
-                $this->success[$name] = "true";
                 return $value;
             }else{
 
@@ -145,7 +142,6 @@ class Validator extends Book
         $value = $this->post($name);
 
         if($this->preg_int($value) === 1){
-            $this->success[$name] = "true";
             return $value;
         }else{
             $this->errors[$name] = "Field $name is required";
@@ -163,7 +159,6 @@ class Validator extends Book
         if(array_key_exists($value, $this->months) == true){
 
             if($this->preg_int($value) === 1){
-                $this->success[$name] = "true";
                 return $value;
             }else{
                 $this->errors[$name] = "Field $name is required";
@@ -187,7 +182,7 @@ class Validator extends Book
             if(preg_match($pattern, $value) === 1){
 
                 if($value < 2012){
-                    $this->success[$name] = "true";
+
                     return $value;
                 }else{
 
@@ -220,7 +215,6 @@ class Validator extends Book
                 $city = ucfirst($location[0]);
                 $country = strtoupper(end($location));
 
-                $this->success[$name] = "true";
                 //return [$city, $country];
                 return  $value;
 
@@ -243,7 +237,7 @@ class Validator extends Book
         if($value !== null){
 
             if(array_key_exists($value, $option) == true){
-                $this->success[$name] = "true";
+
                 return $value;
             }else{
                 $this->errors[$name] = "The value of the field must not be changed";
@@ -273,9 +267,8 @@ class Validator extends Book
     public function password($name){
         $value = $this->post($name);
         if($value !== ''){
-            if($value >= 5){
+            if(strlen($value) >= 5){
 
-                $this->success[$name] = "true";
                return sha1($value);
             }else{
                 $this->errors[$name] = "Password must be at least 5 characters long";
@@ -326,7 +319,6 @@ class Validator extends Book
 
                     if(move_uploaded_file($tmp_name, $storage) == TRUE){
 
-                        $this->success[$name] = "true";
                         return $new_name;
 
                         //return "The file has been downloaded successfully";
@@ -362,7 +354,6 @@ class Validator extends Book
 
             if($this->preg_email($value) == 1){
 
-                $this->success[$name] = "true";
                 return $value;
             }else{
 
@@ -385,10 +376,10 @@ class Validator extends Book
     }
 
     /**
-     * @return array
+     * @return string
      */
     public function success(){
-         return $this->success;
+        if(empty($this->errors)) return 'success';
     }
 
     /**
