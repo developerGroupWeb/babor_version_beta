@@ -5,7 +5,8 @@ use http\Cookie;
 
 class Validator extends Book
 {
-    private $errors =  array();
+    protected $errors =  array();
+    public $flash = array();
     public $months  = [1 => "Janvier", "Février",  "Mars",  "Avril", "Mai", "Juin",  "Juillet", "Août",  "Septembre", "Octobre", "Novembre", "Décembre"];
 
     /**
@@ -248,22 +249,33 @@ class Validator extends Book
     }
 
 
+    /**
+     * @param $name
+     * @return string
+     */
     public function email_or_phone($name){
         $value = $this->post($name);
         $pattern = "/^[0-9 +]+$/";
 
+        $detach = explode('_', $name);
+        $string = implode(' ', $detach);
+
         if($value !== ''){
 
             if(preg_match($pattern, $value)){
-                $this->phone($name);
+                return $this->phone($name);
             }else{
-                $this->email($name);
+                return $this->email($name);
             }
         }else{
-            $this->errors[$name] = "Field $name is required";
+            $this->errors[$name] = "Field $string is required";
         }
     }
 
+    /**
+     * @param $name
+     * @return string
+     */
     public function password($name){
         $value = $this->post($name);
         if($value !== ''){
@@ -288,6 +300,10 @@ class Validator extends Book
         }
     }
 
+    /**
+     * @param string $name
+     * @return string
+     */
     public function file(string $name){
 
         $files = $this->files($name);
@@ -376,11 +392,37 @@ class Validator extends Book
     }
 
     /**
+     * @param string $name
+     * @return mixed
+     */
+    public function message_flash(string $name){
+
+        if(isset($this->flash[$name])) return $this->flash[$name];
+    }
+
+    /**
      * @return string
      */
     public function success(){
-        if(empty($this->errors)) return 'success';
+        if(empty($this->errors)){
+            return true;
+        }else{
+            return false;
+        }
     }
+
+    /**
+     * @return string
+     */
+    public function flash(){
+        if(empty($this->flash)){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
 
     /**
      * @param $name

@@ -11,18 +11,18 @@
 
 class Db
 {
-    private static $instance = null;
+    private  $instance = null;
     private $pdo,
         $query,
         $error = false,
         $results,
         $count = 0;
 
-    public function __construct()
+    protected function setDb()
     {
         try
         {
-            $this->pdo = new PDO('mysql:host=127.0.0.1; dbname=babor; charset=utf8', 'root', '');
+            $this->pdo = new PDO('mysql:host=localhost; dbname=babor; charset=utf8', 'root', '');
         }catch(PDOException $e)
         {
             die($e->getMessage());
@@ -32,13 +32,13 @@ class Db
     /**
      * @return null
      */
-    public static function getInstance()
+    protected function getInstance()
     {
-        if(!isset(self::$instance))
+        if(($this->instance) == null)
         {
-            self::$instance = new Db();
+            $this->setDb();
         }
-        return self::$instance;
+        return $this->pdo;
     }
 
     /**
@@ -49,7 +49,7 @@ class Db
     function query($sql, $params = [])
     {
         $this->error = false;
-        if($this->query = $this->pdo->prepare($sql))
+        if($this->query = $this->getInstance()->prepare($sql))
         {
             $x = 1;
             if(count($params))
@@ -99,9 +99,55 @@ class Db
         return false;
     }
 
+    /**
+     * @param $action
+     * @param $table
+     * @param array $wheres
+     * @return $this|bool
+     */
+    private function builderAction($action, $table, $wheres = []){
+
+        if(count($wheres) === 7){
+            $operators = ['=', '<', '>', '<=', '>=', 'AND', 'OR'];
+
+            $field_first    = $wheres[0];
+            $field_second    = $wheres[4];
+            $operator_first = $wheres[1];
+            $operator_second = $wheres[5];
+            $value_first    = $wheres[2];
+            $value_second    = $wheres[6];
+            $logique  = strtoupper($wheres[3]);
+
+            if(in_array($operator_first, $operators) && in_array($operator_second, $operators) && in_array($logique, $operators)){
+
+                $sql = "{$action} FROM {$table} WHERE {$field_first} {$operator_first} ?  {$logique} {$field_second} {$operator_second} ?";
+
+                if(!$this->query($sql, [$value_first, $value_second])->error()){
+
+                    return $this;
+                }
+            }
+        }
+        return false;
+    }
+
+    /**
+     * @param $table
+     * @param $where
+     * @return bool|Db
+     */
     function get($table, $where){
 
         return $this->action('SELECT *', $table, $where);
+    }
+
+    /**
+     * @param $table
+     * @param $wheres
+     * @return bool|Db
+     */
+    function builderGet($table, $wheres){
+        return $this->builderAction('SELECT *', $table, $wheres);
     }
 
     /**
@@ -127,7 +173,7 @@ class Db
         }
 
         $sql  = "INSERT INTO {$table}(`".implode('`,`', $keys)."`) VALUES({$values})";
-
+        //return $fields; die(1);
         if(!$this->query($sql, $fields)->error()){
 
             return true;

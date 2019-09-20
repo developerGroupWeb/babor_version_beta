@@ -1,6 +1,3 @@
-<?php $title = "Register";?>
-
-
 
 <div class="d-none d-sm-block">
     <div class="d-none d-sm-block singin-nav" style="background: #9d1e65;">
@@ -37,6 +34,8 @@
             </nav>
         </div>
     </div>
+
+    <?php include 'includes/message_flash.php'?>
 
     <div class="col-lg-6 offset-lg-3 col-sm-8 offset-sm-2 singup-content pb-5">
         <div class="row">
@@ -86,7 +85,7 @@
                                 </select>
                             </div>
                             <div class="col-sm-4">
-                                <input type="number" name="year" id="year" class="row form-control"  placeholder="Année..." value="<?= $validate->post('year')?>" pattern="^(19|20)[0-9]{2}" style="<?= ($validate->error('year')) ? "border-color : red" : ''?>"/>
+                                <input type="text" name="year" id="year" class="row form-control"  placeholder="Année..." value="<?= $validate->post('year')?>" pattern="^(19|20)[0-9]{2}" style="<?= ($validate->error('year')) ? "border-color : red" : ''?>"/>
                             </div>
                         </div>
                         <div class="form-group row mb-4">

@@ -1,3 +1,6 @@
+<?php
+include 'url_path.php';
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -65,7 +68,7 @@
                         <a class="nav-link" href="#" style="color: #fff;"><span><i class="fa fa-globe" aria-hidden="true"></i></span> <span class="d-md-none d-lg-inline-block">Trouver à côté</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link border border-light rounded" href="singin.php" style="color: #fff;">Se connecter</a>
+                        <a class="nav-link border border-light rounded" href="<?=(isset($path))? $path : ''?>=login" style="color: #fff;">Se connecter</a>
                     </li>
                 </ul>
             </div>
