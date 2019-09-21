@@ -15,7 +15,7 @@ include 'url_path.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-    <title>Babor.net</title>
+    <title>Babor</title>
 </head>
 <body>
 <div class="all-content"><!--all content here. Important!-->
@@ -62,10 +62,10 @@ include 'url_path.php';
 
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="encounters.php" style="color: #fff;"><span><i class="fa fa-heart-o" aria-hidden="true"></i></span> <span class="d-md-none d-lg-inline-block">Rencontres</span></a>
+                        <a class="nav-link" href="<?=(isset($path))? $path : ''?>=encounter" style="color: #fff;"><span><i class="fa fa-heart-o" aria-hidden="true"></i></span> <span class="d-md-none d-lg-inline-block">Rencontres</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" style="color: #fff;"><span><i class="fa fa-globe" aria-hidden="true"></i></span> <span class="d-md-none d-lg-inline-block">Trouver à côté</span></a>
+                        <a class="nav-link" href="<?=(isset($path))? $path : ''?>=dating" style="color: #fff;"><span><i class="fa fa-globe" aria-hidden="true"></i></span> <span class="d-md-none d-lg-inline-block">Trouver à côté</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link border border-light rounded" href="<?=(isset($path))? $path : ''?>=login" style="color: #fff;">Se connecter</a>

@@ -95,6 +95,14 @@ class Db
                     return $this;
                 }
             }
+        }else{
+
+            $sql = "{$action} FROM {$table}";
+            if(!$this->query($sql, [])->error()){
+
+                return $this;
+            }
+
         }
         return false;
     }
@@ -139,6 +147,10 @@ class Db
     function get($table, $where){
 
         return $this->action('SELECT *', $table, $where);
+    }
+
+    function findAll($table){
+        return $this->action('SELECT *', $table);
     }
 
     /**

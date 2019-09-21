@@ -1,9 +1,7 @@
 <?php
 session_start();
 
-spl_autoload_register(function ($class){
-    require_once realpath('models/'.$class.'.php');
-});
+include 'includes/autoload_classes.php';
 
 $view = htmlspecialchars($_GET['view']);
 

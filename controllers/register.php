@@ -1,7 +1,5 @@
 <?php
 
-$validate = new Validator;
-
 //print_r($_COOKIE);
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
@@ -18,7 +16,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     if($validate->success() == true){
 
-        $db = new Db;
         $row = $db->get('users', ['email', '=', $email]);
 
         if($row->count() == 1){

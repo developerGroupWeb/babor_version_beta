@@ -1,4 +1,5 @@
 
+
 <div class="d-none d-sm-block">
     <div class="d-none d-sm-block singin-nav" style="background: #9d1e65;">
         <div class="px-5">
@@ -168,4 +169,5 @@
         </div>
     </div>
 </div>
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/login.js"></script>

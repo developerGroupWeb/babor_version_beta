@@ -2,21 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16d3b538-3a4a-4a18-b97f-b91bbc0598fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/classes/Test.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/message_flash.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/url_path.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/profile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/check_email.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/encounter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/main.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/derr.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/drtt.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/fffff.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/images.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/images1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/images2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/tyyy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/autoload_classes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/dating.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/encounter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/logout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/Book.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Book.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/Validator.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Validator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/base.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/base.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Db.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/profile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/register.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,17 +56,18 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/includes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp\www\babor\includes" />
-      <recent name="C:\wamp\www\babor" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp\www\babor\models" />
       <recent name="C:\wamp\www\babor\classes" />
       <recent name="C:\wamp\www\babor\views" />
+      <recent name="C:\wamp\www\babor" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\babor\images" />
+      <recent name="C:\wamp\www\babor\includes" />
       <recent name="C:\wamp\www\babor" />
     </key>
   </component>
@@ -93,7 +103,9 @@
       <workItem from="1568518442316" duration="11724000" />
       <workItem from="1568823118254" duration="163000" />
       <workItem from="1568869980988" duration="13388000" />
-      <workItem from="1568959997920" duration="31802000" />
+      <workItem from="1568959997920" duration="35267000" />
+      <workItem from="1569063759935" duration="9615000" />
+      <workItem from="1569096693329" duration="3888000" />
     </task>
     <servers />
   </component>

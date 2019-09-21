@@ -95,6 +95,7 @@
                                 <small id="emailHelp" class="form-text text-muted ml-3">p. ex. cotonou, Benin</small>
                             </div>
                         </div>
+
                         <div class="form-check form-check-inline mb-4 mr-5">
                             <input class="form-check-input" type="radio" name="sexy" id="inlineRadio1" value="male" <?=(isset($_POST['sexy']) && $_POST['sexy'] == 'male')? 'checked' : ''?>>
                             <label class="form-check-label" for="inlineRadio1">Homme</label>
