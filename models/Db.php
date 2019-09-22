@@ -204,7 +204,10 @@ class Db extends CalculateAge
      * @param $fields
      * @return bool
      */
-    function update($table, $id, $fields){
+    function update($table, $where, $fields = []){
+
+        $pattern = "/^[0-9]+$/";
+        $column = (preg_match($pattern, $where) == 1) ? 'id' : 'email';
 
         $set = '';
         $x   =  1;
@@ -221,8 +224,8 @@ class Db extends CalculateAge
         }
 
 
-        $sql = "UPDATE {$table} SET  {$set}  WHERE id = {$id}";
-
+        $sql = "UPDATE {$table} SET {$set} WHERE {$column} = {$where}";
+        //return $sql;
         if(!$this->query($sql, $fields)->error()){
 
             return true;

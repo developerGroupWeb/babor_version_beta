@@ -41,14 +41,15 @@
     <div class="col-lg-6 offset-lg-3 col-sm-8 offset-sm-2 singin-content pb-5">
         <div class="row">
             <div class="col-md-9 col-sm-12">
+
                 <div class="row">
                     <h4>Connecte-toi sur Badoo</h4>
                 </div>
                 <div class="row mr-5">
-                    <p>Saisis tes identifiants de connexion. <a href="?view=register">Inscris-toi ici</a> si ce n'est pas encore fait !</p>
+                    <p>Saisis identifiant de connexion. <a href="?view=register">Inscris-toi ici</a> si ce n'est pas encore fait !</p>
                 </div>
                 <div class="row">
-                    <form method="post" action="" class="col-sm-12" id="form-login">
+                    <form method="post" action="" class="col-sm-12" id="form-reset">
                         <div class="form-group row mb-4">
                             <label for="email" class="mr-4">Identifiant</label>
                             <div class="col-md-8 col-sm-12">
@@ -56,13 +57,7 @@
                                 <span class="text-danger error-email font-italic"><?= $validate->error("email_or_phone")?></span>
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label for="password" class="">Mot de passe</label>
-                            <div class="col-md-8 col-sm-12">
-                                <input type="password" name="password" class="form-control" id="password" value="<?= $validate->post('password')?>" placeholder="Mot de passe">
-                                <span class="text-danger error-password font-italic"><?= $validate->error("password")?></span>
-                            </div>
-                        </div>
+
                         <div class="form-check my-4" style="margin-left: 100px;">
                             <input class="form-check-input" type="checkbox" value="" id="check">
                             <label class="form-check-label" for="check">
@@ -70,12 +65,13 @@
                             </label>
                         </div>
                         <div class="singin-btn-validate" style="margin-left: 100px;">
-                            <button type="submit" name="login"  class="btn font-weight-bold" role="button">Se connecter</button>
+                            <button type="submit" name="forget_pass"  class="btn font-weight-bold" role="button">Continuer</button>
                         </div>
-                        <p style="margin-left: 110px;" class="mt-2"><a href="?view=password_forget" style="color: #a1a1a1;">Mot de passe oublié ?</a></p>
+
                     </form>
 
                 </div>
+
             </div>
             <div class="col-md-3 col-sm-12 box2">
                 <p class="my-4 text-center">Se connecter avec :</p>
@@ -135,19 +131,14 @@
         <?php include 'includes/message_flash.php'?>
 
         <div class="row pl-4">
-            <form method="post" action="" class="col-12" id="form-login">
+            <form method="post" action="" class="col-12" id="form-reset">
                 <div class="form-group row mb-4">
                     <div class="col-12">
                         <input type="text" name="email_or_phone" class="row form-control" id="email" value="<?= $validate->post('email_or_phone')?>" placeholder="E-mail ou numéro de téléphone">
                         <span class="text-danger error-email font-italic"><?= $validate->error("email_or_phone")?></span>
                     </div>
                 </div>
-                <div class="form-group row">
-                    <div class="col-12">
-                        <input type="password" name="password" class="row form-control" id="password" value="<?= $validate->post('password')?>" placeholder="Mot de passe">
-                        <span class="text-danger error-email font-italic"><?= $validate->error("password")?></span>
-                    </div>
-                </div>
+
                 <div class="form-check my-4">
                     <input class="form-check-input" type="checkbox" value="" id="check">
                     <label class="form-check-label" for="check">
@@ -156,10 +147,10 @@
                 </div>
                 <div class="col-10">
                     <div class="row mx-auto">
-                        <button type="submit" name="login" class="btn btn-primary w-100" role="button">Se connecter</button>
+                        <button type="submit" name="forget_pass" class="btn btn-primary w-100" role="button">Continuer</button>
                     </div>
                 </div>
-                <p class="mx-auto text-center p-2"><a href="?view=password_forget" style="color: #b6b6b6;">Mot de passe oublié ?</a></p>
+               <br/>
             </form>
         </div>
 
@@ -170,4 +161,4 @@
     </div>
 </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="js/login.js"></script>
+<script src="js/password_forget.js"></script>

@@ -14,10 +14,10 @@ if(in_array($view.'.php', $views)){
     header("Location:main.php");
 }
 
-if((isset($_SESSION['email']) or isset($_SESSION['password'])) and $view != 'profile')
+/*if((isset($_SESSION['email']) or isset($_SESSION['password'])) and $view != 'profile')
 {
     header("Location:?view=profile");
-}
+}*/
 
 $controllers = scandir('controllers');
 if(in_array($view.'.php', $controllers)){

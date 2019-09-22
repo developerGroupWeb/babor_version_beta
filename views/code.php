@@ -36,7 +36,7 @@
         </div>
     </div>
 
-    <?php include 'includes/message_flash.php'?>
+
 
     <div class="col-lg-6 offset-lg-3 col-sm-8 offset-sm-2 singin-content pb-5">
         <div class="row">
@@ -48,19 +48,13 @@
                     <p>Saisis tes identifiants de connexion. <a href="?view=register">Inscris-toi ici</a> si ce n'est pas encore fait !</p>
                 </div>
                 <div class="row">
-                    <form method="post" action="" class="col-sm-12" id="form-login">
-                        <div class="form-group row mb-4">
-                            <label for="email" class="mr-4">Identifiant</label>
-                            <div class="col-md-8 col-sm-12">
-                                <input type="text" name="email_or_phone" class="form-control" id="email" value="<?= $validate->post('email_or_phone')?>" placeholder="E-mail ou numéro de téléphone">
-                                <span class="text-danger error-email font-italic"><?= $validate->error("email_or_phone")?></span>
-                            </div>
-                        </div>
+                    <form method="post" action="" class="col-sm-12" id="form-code">
+
                         <div class="form-group row">
-                            <label for="password" class="">Mot de passe</label>
+                            <label for="password" class="">Saisir code</label>
                             <div class="col-md-8 col-sm-12">
-                                <input type="password" name="password" class="form-control" id="password" value="<?= $validate->post('password')?>" placeholder="Mot de passe">
-                                <span class="text-danger error-password font-italic"><?= $validate->error("password")?></span>
+                                <input type="code" name="code" class="form-control" id="code" value="<?= $validate->post('code')?>" placeholder="code">
+                                <span class="text-danger error-password font-italic"><?= $validate->error("code")?></span>
                             </div>
                         </div>
                         <div class="form-check my-4" style="margin-left: 100px;">
@@ -70,9 +64,9 @@
                             </label>
                         </div>
                         <div class="singin-btn-validate" style="margin-left: 100px;">
-                            <button type="submit" name="login"  class="btn font-weight-bold" role="button">Se connecter</button>
+                            <button type="submit" name="code"  class="btn font-weight-bold" role="button">Se connecter</button>
                         </div>
-                        <p style="margin-left: 110px;" class="mt-2"><a href="?view=password_forget" style="color: #a1a1a1;">Mot de passe oublié ?</a></p>
+
                     </form>
 
                 </div>
@@ -132,20 +126,14 @@
             </div>
         </div>
 
-        <?php include 'includes/message_flash.php'?>
+
 
         <div class="row pl-4">
-            <form method="post" action="" class="col-12" id="form-login">
-                <div class="form-group row mb-4">
-                    <div class="col-12">
-                        <input type="text" name="email_or_phone" class="row form-control" id="email" value="<?= $validate->post('email_or_phone')?>" placeholder="E-mail ou numéro de téléphone">
-                        <span class="text-danger error-email font-italic"><?= $validate->error("email_or_phone")?></span>
-                    </div>
-                </div>
+            <form method="post" action="" class="col-12" id="form-code">
                 <div class="form-group row">
                     <div class="col-12">
-                        <input type="password" name="password" class="row form-control" id="password" value="<?= $validate->post('password')?>" placeholder="Mot de passe">
-                        <span class="text-danger error-email font-italic"><?= $validate->error("password")?></span>
+                        <input type="text" name="code" class="row form-control" id="code" value="<?= $validate->post('code')?>" placeholder="code">
+                        <span class="text-danger error-code font-italic"><?= $validate->error("code")?></span>
                     </div>
                 </div>
                 <div class="form-check my-4">
@@ -156,10 +144,10 @@
                 </div>
                 <div class="col-10">
                     <div class="row mx-auto">
-                        <button type="submit" name="login" class="btn btn-primary w-100" role="button">Se connecter</button>
+                        <button type="submit" name="code" class="btn btn-primary w-100" role="button">Se connecter</button>
                     </div>
                 </div>
-                <p class="mx-auto text-center p-2"><a href="?view=password_forget" style="color: #b6b6b6;">Mot de passe oublié ?</a></p>
+                <br/>
             </form>
         </div>
 

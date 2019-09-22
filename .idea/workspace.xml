@@ -2,23 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16d3b538-3a4a-4a18-b97f-b91bbc0598fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/profile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/Dom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/CalculateAge.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/code.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/password_forget.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/reset_password.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/password_forget.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/code.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/password_forget.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/reset_password.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/encounter.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/encounter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/encounter.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/encounter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +42,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../chat" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -97,7 +91,10 @@
       <workItem from="1568869980988" duration="13388000" />
       <workItem from="1568959997920" duration="35267000" />
       <workItem from="1569063759935" duration="9615000" />
-      <workItem from="1569096693329" duration="23591000" />
+      <workItem from="1569096693329" duration="24114000" />
+      <workItem from="1569139772988" duration="875000" />
+      <workItem from="1569161502284" duration="10955000" />
+      <workItem from="1569180104429" duration="34000" />
     </task>
     <servers />
   </component>
