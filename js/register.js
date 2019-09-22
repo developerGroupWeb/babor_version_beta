@@ -16,7 +16,7 @@ $(function () {
     };
     const borderColorMessage = (id) => {
         return $(id).css('border-color', 'red');
-    }
+    };
 
 
     const birthDay = (id) => {
@@ -36,7 +36,7 @@ $(function () {
     };
 
 
-    $(document).on('keyup', '#name', function () {
+    $(document).on('blur', '#name', function () {
         let name = $(this).val();
         let filter = /^[a-zA-Zéèêëíìîïñóòôöõúùûüýÿæ -]+$/i;
 
@@ -58,7 +58,7 @@ $(function () {
     birthDay('#day');
     birthDay('#month');
 
-    $(document).on('keyup', '#year', function () {
+    $(document).on('blur', '#year', function () {
         let year = $(this).val();
         let filter = /^(19|20)[0-9]{2}/;
 
@@ -77,7 +77,7 @@ $(function () {
         }
     });
 
-    $(document).on('keyup', '#location', function () {
+    $(document).on('blur', '#location', function () {
         let location = $(this).val();
         let filter = /^[a-zA-Z ,]+$/;
 
@@ -102,7 +102,7 @@ $(function () {
         }
     });
 
-    $(document).on('keyup', '#email', function () {
+    $(document).on('blur', '#email', function () {
         let string = $(this).val();
         let filter = /^[0-9 +]+$/;
         let number = /^(\+)[0-9]{11,12}/;
@@ -135,7 +135,7 @@ $(function () {
 
     });
 
-    $(document).on('keyup', '#password', function () {
+    $(document).on('blur', '#password', function () {
         let pass = $(this).val();
         if(pass === ''){
             alertMessage(this, '.error-password', 'Field password is required');

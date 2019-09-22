@@ -2,29 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16d3b538-3a4a-4a18-b97f-b91bbc0598fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/check_email.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/encounter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/main.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/derr.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/drtt.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/fffff.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/images.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/images1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/images2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/tyyy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/autoload_classes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/dating.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/encounter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/profile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/Dom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/CalculateAge.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/encounter.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/encounter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/main.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/main.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/encounter.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/encounter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/profile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/register.php" afterDir="false" />
     </list>
@@ -105,7 +97,7 @@
       <workItem from="1568869980988" duration="13388000" />
       <workItem from="1568959997920" duration="35267000" />
       <workItem from="1569063759935" duration="9615000" />
-      <workItem from="1569096693329" duration="3888000" />
+      <workItem from="1569096693329" duration="23591000" />
     </task>
     <servers />
   </component>

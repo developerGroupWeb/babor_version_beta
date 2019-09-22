@@ -1,7 +1,4 @@
-<?php
-if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
 
-?>
     <br/><a class='btn btn-group-lg btn-info' href='?view=logout'>Log out</a><br/><br/>
 
     <div class="bg-light">
@@ -205,8 +202,8 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
                                         <div class="nav-item textcontentNav">
                                             <h4>
                                                 <a href="" class="nav-link text-dark">
-                                                    <span>Prenom</span>,
-                                                    <span>age</span></a>
+                                                    <span><?=$user->name?></span>,
+                                                    <span><?=$age?></span></a>
                                             </h4>
                                             <span>
 						    		<a href="" class="nav-link">
@@ -283,7 +280,7 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
                                     <div class="">
                                         <h5 class="row" style="color: #737373;">Emplacement</h5>
 
-                                        <h6 style="color: #a6a6a6;" class="row">Ville, Pays</h6>
+                                        <h6 style="color: #a6a6a6;" class="row"><?=$city,', '.$country?></h6>
                                     </div>
 
                                     <hr class="row">
@@ -383,8 +380,3 @@ if(isset($_SESSION['email']) && isset($_SESSION['password'])) {
             </div>
         </div>
     </div>
-
-    <?php
-}else{
-    header('Location:?view=login');
-}

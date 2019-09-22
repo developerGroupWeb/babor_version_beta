@@ -174,6 +174,8 @@
     </div>
 </div>
 
+
+<?php include 'includes/message_flash.php'?>
 <!--singin page on mobile-->
 <div class="container wow fadeInLeft pl-5 d-block d-sm-none">
     <div class="row">
@@ -186,15 +188,18 @@
         </div>
     </div>
 
-    <form class="col-12">
+
+    <form class="col-12" method="post" action="" id="form-login">
         <div class="form-group row mb-4">
             <div class="col-12">
-                <input type="email" class="row form-control" id="email" placeholder="E-mail ou numéro de téléphone">
+                <input type="text" name="email_or_phone" class="row form-control" id="email" value="<?= $validate->post('email_or_phone')?>" placeholder="E-mail ou numéro de téléphone">
+                <span class="text-danger error-email font-italic"><?= $validate->error("email_or_phone")?></span>
             </div>
         </div>
         <div class="form-group row">
             <div class="col-12">
-                <input type="password" class="row form-control" id="password" placeholder="Mot de passe">
+                <input type="password" name="password" class="row form-control" id="password" placeholder="Mot de passe" value="<?= $validate->post('password')?>"/>
+                <span class="text-danger error-password font-italic"><?= $validate->error("password")?></span>
             </div>
         </div>
         <div class="form-check my-4">

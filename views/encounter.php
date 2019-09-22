@@ -21,6 +21,8 @@
                             </div>
                         </div>
 
+                        <?php include 'includes/message_flash.php'?>
+
                         <div class="row mb-4">
                             <h4 class="mx-auto">Crée un profil</h4>
                         </div>
@@ -108,7 +110,7 @@
                         <small class="row text-center" style="font-size: 10px; text-align: center;">En continuant, tu confirmes avoir lu et accepté nos Conditions Générales d'Utilisation, notre Politique de Confidentialité ainsi que notre Politique en matière de Cookies</small>
 
                         <div class="row">
-                            <p class="mx-auto mt-2">Déjà membre ? <a href="singin.php">Connecte-toi</a></p>
+                            <p class="mx-auto mt-2">Déjà membre ? <a href="?view=login">Connecte-toi</a></p>
                         </div>
                     </div>
 
@@ -168,8 +170,8 @@
                                     <div class="nav-item">
                                         <h4>
                                             <a href="" class="nav-link">
-                                                <span>Prenom</span>,
-                                                <span>age</span></a>
+                                                <span><?=$first->name?></span>,
+                                                <span><?=$age?></span></a>
                                         </h4>
                                         <span><a href="" class="nav-link">
 						    		<span>O</span>

@@ -1,6 +1,6 @@
 <?php
 
-
+//include '../classes/CalculateAge.php';
 
 /**
  * Created by PhpStorm.
@@ -9,7 +9,7 @@
  * Time: 08:49
  */
 
-class Db
+class Db extends CalculateAge
 {
     private  $instance = null;
     private $pdo,
@@ -149,6 +149,10 @@ class Db
         return $this->action('SELECT *', $table, $where);
     }
 
+    /**
+     * @param $table
+     * @return bool|Db
+     */
     function findAll($table){
         return $this->action('SELECT *', $table);
     }
@@ -266,6 +270,15 @@ class Db
     function error()
     {
         return $this->error;
+    }
+
+    /**
+     * @param $name
+     * @param $args
+     */
+    public function __call($name, $args){
+
+        echo $name," doesn't exist in this class";
     }
 
 

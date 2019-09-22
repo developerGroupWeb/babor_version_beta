@@ -16,7 +16,7 @@ $(function(){
     };
 
 
-    $(document).on('keyup', '#email', function () {
+    $(document).on('blur', '#email', function () {
         let string = $(this).val();
         let filter = /^[0-9 +]+$/;
         let number = /^(\+)[0-9]{11,12}/;
@@ -67,7 +67,7 @@ $(function(){
 
     });
 
-    $(document).on('keyup', '#password', function () {
+    $(document).on('blur', '#password', function () {
         let pass = $(this).val();
         if(pass === ''){
             alertMessage(this, '.error-password', 'Field password is required');

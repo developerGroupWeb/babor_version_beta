@@ -42,7 +42,7 @@ include 'includes/autoload_classes.php';
             </div>
             <div class="col-12">
                 <div class="row">
-                    <h6 class="my-3 mx-auto text-center"><a href="singin.php" class=" font-weight-bold">Tu a deja un compte ? Connexion</a></h6>
+                    <h6 class="my-3 mx-auto text-center"><a href="<?=(isset($path))? $path : ''?>=login" class=" font-weight-bold">Tu a deja un compte ? Connexion</a></h6>
                 </div>
             </div>
             <div class="col-12">
@@ -120,14 +120,14 @@ include 'includes/autoload_classes.php';
                                     <p class="mb-3 mx-auto">Tu es...</p>
                                     <div class="col-12">
                                         <div class="row secondFace-btn1">
-                                            <a class="btn mb-3 mx-auto singupPage-call"   role="button">Homme</a>
+                                            <a class="btn mb-3 mx-auto singupPage-call" id="male" value="male" role="button">Homme</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="row secondFace-btn2">
-                                            <a class="btn mx-auto singupPage-call"  role="button">Femme</a>
+                                            <a class="btn mx-auto singupPage-call" id="female" value="female"  role="button">Femme</a>
                                         </div>
                                     </div>
                                 </div>
@@ -140,7 +140,7 @@ include 'includes/autoload_classes.php';
                                 </div>
                             </div>
                         </div>
-
+                        <div class="alert alert-info error-save"></div>
                         <div class="row singupPage-home" style="padding-bottom: 50px; padding-top: 50px; padding-left: 50px;">
                             <div class="col-12">
                                 <div class="row mb-4">
@@ -248,5 +248,6 @@ include 'includes/autoload_classes.php';
     </div>
 </div>
 </div><!--end all content-->
-<script src="js/register.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
 </body>

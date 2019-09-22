@@ -1,7 +1,7 @@
 <?php
 $validate =  new Validator;
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
+if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])){
 
     $log = $validate->email_or_phone('email_or_phone');
     $pass = $validate->password('password');

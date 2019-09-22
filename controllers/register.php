@@ -1,7 +1,7 @@
 <?php
 
 //print_r($_COOKIE);
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
+if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['register'])){
 
     $name = $validate->text('name');
     $day = $validate->select_day('day');
@@ -35,4 +35,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     }
 }
+
+include 'controllers/login.php';
 
