@@ -150,15 +150,15 @@ $(function () {
     });
 
     $(document).on('submit', '#form-register', function () {
-        let form = $(this);
-        let name = form.find('#name').val();
-        let day = form.find('#day').val();
-        let month = form.find('#month').val();
-        let year = form.find('#year').val();
-        let location = form.find('#location').val();
-        let sex = form.find('input[type=radio]:checked').val();
-        let email = form.find('#email').val();
-        let pass = form.find('#password').val();
+        let form = $(this),
+         name = form.find('#name').val(),
+         day = form.find('#day').val(),
+         month = form.find('#month').val(),
+         year = form.find('#year').val(),
+         location = form.find('#location').val(),
+         sex = form.find('input[type=radio]:checked').val(),
+         email = form.find('#email').val(),
+         pass = form.find('#password').val();
 
         let filter = /^[0-9]+$/;
         //alert(error_year)

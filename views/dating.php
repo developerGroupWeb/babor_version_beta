@@ -275,15 +275,19 @@
                 <div class="row py-4">
                     <div class="col-12">
                         <div class="row">
+
+                            <?php foreach ($users as $user)
+                            { ?>
+
                             <div class="col-6 col-md-4 col-xl-3">
                                 <div class="card mb-4">
-                                    <a href="{{route('page', ['profile' => 'profile'])}}" title="Prenom">
+                                    <a href="{{route('page', ['profile' => 'profile'])}}" title="<?=$user->name?>">
                                         <img src="images/imfine.jpg" class="card-img-top" style="height: 160px;">
                                         <div class="badge p-2 text-light" style="position: absolute; top: 125px; left: 10px;  background: rgba(0,0,0,0.6);"><i class="fa fa-camera" aria-hidden="true"></i> 1/5</div>
                                         <div class="card-body p-2 bg-white">
                                             <div class="col-12">
                                                 <div class="row">
-                                                    <h5 style="color: #737373;">Prenom</h5>
+                                                    <h5 style="color: #737373;"><?=$user->name?></h5>
                                                     <div class="mt-2 ml-2">
                                                         <div style="background-color: #cccccc; border-radius: 100px; padding: 4px;">
 
@@ -291,132 +295,17 @@
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <small style="color: #a6a6a6;" class="font-weight-bold">Ville</small>
+                                                    <small style="color: #a6a6a6;" class="font-weight-bold"><?=city_country($user)->city?></small>
                                                 </div>
                                             </div>
                                         </div></a>
                                 </div>
                             </div>
-                            <div class="col-6 col-md-4 col-xl-3">
-                                <div class="card mb-4">
-                                    <img src="images/drtt.jpg" class="card-img-top" style="height: 160px;">
-                                    <div class="card-body p-2 bg-white">
-                                        <div class="col-12">
-                                            <div class="row">
-                                                <h5 style="color: #737373;">Name</h5>
-                                                <div class="mt-2 ml-2">
-                                                    <div style="background-color: #cccccc; border-radius: 100px; padding: 4px;">
 
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <small style="color: #a6a6a6;" class="font-weight-bold">Ville</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-xl-3">
-                                <div class="card mb-4">
-                                    <img src="images/images.jpg" class="card-img-top" style="height: 160px;">
-                                    <div class="card-body p-2 bg-white">
-                                        <div class="col-12">
-                                            <div class="row">
-                                                <h5 style="color: #737373;">Name</h5>
-                                                <div class="mt-2 ml-2">
-                                                    <div style="background-color: #cccccc; border-radius: 100px; padding: 4px;">
+                            <?php
+                            }
+                            ?>
 
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <small style="color: #a6a6a6;" class="font-weight-bold">Ville</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-xl-3">
-                                <div class="card mb-4">
-                                    <img src="images/images2.jpg" class="card-img-top" style="height: 160px;">
-                                    <div class="card-body p-2 bg-white">
-                                        <div class="col-12">
-                                            <div class="row">
-                                                <h5 style="color: #737373;">Name</h5>
-                                                <div class="mt-2 ml-2">
-                                                    <div style="background-color: #cccccc; border-radius: 100px; padding: 4px;">
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <small style="color: #a6a6a6;" class="font-weight-bold">Ville</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-xl-3">
-                                <div class="card mb-4">
-                                    <img src="images/images1.jpg" class="card-img-top" style="height: 160px;">
-                                    <div class="card-body p-2 bg-white">
-                                        <div class="col-12">
-                                            <div class="row">
-                                                <h5 style="color: #737373;">Name</h5>
-                                                <div class="mt-2 ml-2">
-                                                    <div style="background-color: #cccccc; border-radius: 100px; padding: 4px;">
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <small style="color: #a6a6a6;" class="font-weight-bold">Ville</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-xl-3">
-                                <div class="card mb-4">
-                                    <img src="images/fffff.jpg" class="card-img-top" style="height: 160px;">
-                                    <div class="card-body p-2 bg-white">
-                                        <div class="col-12">
-                                            <div class="row">
-                                                <h5 style="color: #737373;">Name</h5>
-                                                <div class="mt-2 ml-2">
-                                                    <div style="background-color: #cccccc; border-radius: 100px; padding: 4px;">
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <small style="color: #a6a6a6;" class="font-weight-bold">Ville</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-xl-3">
-                                <div class="card mb-4">
-                                    <img src="images/derr.jpg" class="card-img-top" style="height: 160px;">
-                                    <div class="card-body p-2 bg-white">
-                                        <div class="col-12">
-                                            <div class="row">
-                                                <h5 style="color: #737373;">Name</h5>
-                                                <div class="mt-2 ml-2">
-                                                    <div style="background-color: #cccccc; border-radius: 100px; padding: 4px;">
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <small style="color: #a6a6a6;" class="font-weight-bold">Ville</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -427,13 +316,9 @@
                             <li class="page-item disabled mr-2 rounded">
                                 <a class="page-link" href="#" tabindex="-1">Précédent</a>
                             </li>
-                            <li class="page-item active mr-2"><a class="page-link rounded-circle" href="#">1 <span class="sr-only">(current)</span></a></li>
-                            <li class="page-item mr-2"><a class="page-link rounded-circle" href="#">2</a></li>
-                            <li class="page-item mr-2"><a class="page-link rounded-circle" href="#">3</a></li>
-                            <li class="page-item mr-2"><a class="page-link rounded-circle" href="#">4</a></li>
-                            <li class="page-item mr-2"><a class="page-link rounded-circle" href="#">5</a></li>
-                            <li class="page-item mr-2"><a class="page-link rounded-circle" href="#">6</a></li>
-                            <li class="page-item mr-2"><a class="page-link rounded-circle" href="#">7</a></li>
+
+                            <?php paginate($all->count());?>
+
                             <li class="page-item">
                                 <a class="page-link rounded" href="#">Suivant</a>
                             </li>
@@ -460,7 +345,10 @@
                         </div>
                     </div>
                 </footer>
+
             </div>
         </div>
     </div>
 </div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/dating.js"></script>

@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16d3b538-3a4a-4a18-b97f-b91bbc0598fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/code.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/password_forget.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/reset_password.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/password_forget.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/code.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/password_forget.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/reset_password.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/dating.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helpers/city_country.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helpers/paginate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/dating.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/encounter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/Test.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/Test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/autoload_classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/autoload_classes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/dating.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/dating.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/encounter.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/encounter.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +29,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="TypeScript File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -45,15 +47,16 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../chat" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp\www\babor\models" />
-      <recent name="C:\wamp\www\babor\classes" />
-      <recent name="C:\wamp\www\babor\views" />
-      <recent name="C:\wamp\www\babor" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp\www\babor\images" />
       <recent name="C:\wamp\www\babor\includes" />
+      <recent name="C:\wamp\www\babor" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\babor_version_beta\js" />
+      <recent name="C:\wamp\www\babor\models" />
+      <recent name="C:\wamp\www\babor\classes" />
+      <recent name="C:\wamp\www\babor\views" />
       <recent name="C:\wamp\www\babor" />
     </key>
   </component>
@@ -95,6 +98,11 @@
       <workItem from="1569139772988" duration="875000" />
       <workItem from="1569161502284" duration="10955000" />
       <workItem from="1569180104429" duration="34000" />
+      <workItem from="1569180499173" duration="17000" />
+      <workItem from="1569402611149" duration="47000" />
+      <workItem from="1569403452263" duration="193000" />
+      <workItem from="1569652887715" duration="1000" />
+      <workItem from="1569652899653" duration="11775000" />
     </task>
     <servers />
   </component>

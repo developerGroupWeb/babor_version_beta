@@ -1,6 +1,6 @@
 <?php
 
-//include '../classes/CalculateAge.php';
+//include '../helpers/CalculateAge.php';
 
 /**
  * Created by PhpStorm.
@@ -234,12 +234,16 @@ class Db extends CalculateAge
         return false;
     }
 
+
     /**
      * @return mixed
      */
     function results(){
 
         return $this->results;
+    }
+    function skip(){
+
     }
 
     /**
