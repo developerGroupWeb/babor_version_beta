@@ -1,4 +1,5 @@
 <div class="bg-light">
+
     <div class="container">
         <div class="row">
             <div class="col-lg-3 d-none d-lg-block" style="">
@@ -117,7 +118,124 @@
                 </div>
             </div>
 
-            <div class="col-lg-9 d-none d-sm-block" style="">
+
+
+
+                <div class="col-lg-9" style="" id="parent">
+
+                        <div class="row">
+                                <header class="col-12">
+                                    <div class="row d-none d-sm-block d-lg-none">
+                                        <nav class="col-12 navbar navbar-expand-sm navbar-light">
+                                            <a href="index.php"><img src="images/Logo45.png" style="width: 150px; height: 30px;"></a>
+
+                                            <div class="collapse navbar-collapse">
+                                                <div class="nav-item">
+                                                    <p class="text-navbar d-none d-md-inline-block">Inscris-toi pour voir qui est autour de toi en ce moment !</p>
+                                                </div>
+
+                                                <ul class="navbar-nav ml-auto">
+                                                    <li class="nav-item">
+                                                        <a class="btn mb-3 bg-dark font-weight-bold text-white" href="singup.php" role="button"><i class="fa fa-envelope-square" aria-hidden="true"></i> Creer un profil</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <div class="">
+                                                            <a class="btn bg-dark mx-2" href="#" role="button"><i style="margin-right: 8px;" class="fa fa-facebook-official" aria-hidden="true"></i>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <div class="">
+                                                            <a class="btn bg-warning" href="#" role="button"><i style="margin-left: 10px; margin-right: 10px;" class="fa fa-google" aria-hidden="true"></i>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </nav>
+                                    </div>
+
+                                    <div class="row">
+                                        <nav class=" col-12 navbar navbar-expand-sm navbar-light bg-white encounter">
+
+                                            <div class="collapse navbar-collapse">
+                                                <ul class="navbar-nav">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#"><i class="fa fa-heart fa-2x" aria-hidden="true"></i></a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a>
+                                                    </li>
+                                                </ul>
+                                                <sup class="nav-item">
+                                                    <div style="background-color: red; border-radius: 100px; padding: 5px;"></div>
+                                                </sup>
+                                                <div class="nav-item">
+                                                    <h4>
+                                                        <a href="" class="nav-link">
+                                                            <span><?=$first->name?></span>,
+                                                            <span><?=$age?></span></a>
+                                                    </h4>
+                                                    <span><a href="" class="nav-link">
+                                            <span>O</span>
+                                            <span><small>Ses centre d'interets</small></span></a>
+                                        </span>
+                                                </div>
+
+                                                <ul class="navbar-nav ml-auto">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#" title="Voir le profil"><i class="fa fa-user-o fa-x" aria-hidden="true"></i></a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#" title="Ajouter aux favoris"><i class="fa fa-star-o fa-x" aria-hidden="true"></i></a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#"><i class="fa fa-sliders fa-x" aria-hidden="true"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                </header>
+
+
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="mb-5" style=" background-color: #333;">
+                                        <img src="images/imag.jpg" class=" mx-auto b-block" style="">
+                                    </div>
+                                </div>
+
+                                <hr class="row">
+                                <footer class="row">
+                                    <div class="col-12 bg-white">
+                                        <div class="row">
+                                            <div class="footerContent">
+                                                <a href="">A propos</a>
+                                                <a href="">CGU</a>
+                                                <a href="">Confidentialité</a>
+                                                <a href="">Liens rapides</a>
+                                                <a href="">Aide</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <small class="ml-auto pr-4 pb-4 font-weight-bold">2018-<?=date('Y')?> © Babor</small>
+                                        </div>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div>
+                </div>
+
+            <?php foreach ($users as $user)
+            {
+            ?>
+
+            <div class="col-lg-9 d-none" style="">
+
                 <div class="row">
                     <header class="col-12">
                         <div class="row d-none d-sm-block d-lg-none">
@@ -170,13 +288,13 @@
                                     <div class="nav-item">
                                         <h4>
                                             <a href="" class="nav-link">
-                                                <span><?=$first->name?></span>,
-                                                <span><?=$age?></span></a>
+                                                <span><?=$user->name?></span>,
+                                                <span><?=$all->getAge(format_date($user))?></span></a>
                                         </h4>
                                         <span><a href="" class="nav-link">
-						    		<span>O</span>
-						    		<span><small>Ses centre d'interets</small></span></a>
-						    	</span>
+                                            <span>O</span>
+                                            <span><small>Ses centre d'interets</small></span></a>
+                                        </span>
                                     </div>
 
                                     <ul class="navbar-nav ml-auto">
@@ -194,36 +312,46 @@
                             </nav>
                         </div>
                     </header>
-                </div>
 
-                <div class="col-12">
-                    <div class="row">
-                        <div class="mb-5" style=" background-color: #333;">
-                            <img src="images/imag.jpg" class=" mx-auto b-block" style="">
+
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="mb-5" style=" background-color: #333;">
+                                <img src="images/imag.jpg" class=" mx-auto b-block" style="">
+                            </div>
                         </div>
-                    </div>
 
-                    <hr class="row">
-                    <footer class="row">
-                        <div class="col-12 bg-white">
-                            <div class="row">
-                                <div class="footerContent">
-                                    <a href="">A propos</a>
-                                    <a href="">CGU</a>
-                                    <a href="">Confidentialité</a>
-                                    <a href="">Liens rapides</a>
-                                    <a href="">Aide</a>
+                        <hr class="row">
+                        <footer class="row">
+                            <div class="col-12 bg-white">
+                                <div class="row">
+                                    <div class="footerContent">
+                                        <a href="">A propos</a>
+                                        <a href="">CGU</a>
+                                        <a href="">Confidentialité</a>
+                                        <a href="">Liens rapides</a>
+                                        <a href="">Aide</a>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <small class="ml-auto pr-4 pb-4 font-weight-bold">2018-<?=date('Y')?> © Babor</small>
                                 </div>
                             </div>
-
-                            <div class="row">
-                                <small class="ml-auto pr-4 pb-4 font-weight-bold">2018 © Babor</small>
-                            </div>
-                        </div>
-                    </footer>
+                        </footer>
+                    </div>
                 </div>
             </div>
+
+            <?php
+            }
+            ?>
+
+
         </div>
+
     </div>
 </div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/encounter.js"></script>
 <script src="js/register.js"></script>

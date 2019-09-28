@@ -75,11 +75,14 @@ class Db extends CalculateAge
      * @param $action
      * @param $table
      * @param array $where
+     * @param null $orderBy
      * @return $this|bool
      */
+    // [ORDER BY id DESC]
     private function action($action, $table, $where = []){
 
-        if(count($where) === 3){
+        if(gettype($where) == 'array' && count($where) === 3){
+
             $operators = ['=', '<', '>', '<=', '>='];
 
             $field    = $where[0];
@@ -105,6 +108,47 @@ class Db extends CalculateAge
 
         }
         return false;
+    }
+
+    private function actionBy($action, $table, $orderBy){
+
+        $order = (gettype($orderBy) == 'string' && strlen($orderBy) > 8) ? $orderBy : '';
+        $sql = "{$action} FROM {$table} $order";
+        if(!$this->query($sql, [])->error()){
+
+            return $this;
+        }
+    }
+
+    /**
+     * @param $action
+     * @param $table
+     * @param array $where
+     * @param null $orderBy
+     * @return $this
+     */
+    private function actionOneBy($action, $table, $where = [], $orderBy = null)
+    {
+        $order = (gettype($orderBy) == 'string' && strlen($orderBy) > 8) ? $orderBy : '';
+
+        if (gettype($where) == 'array' && count($where) === 3) {
+
+            $operators = ['=', '<', '>', '<=', '>='];
+
+            $field = $where[0];
+            $operator = $where[1];
+            $value = $where[2];
+
+            if (in_array($operator, $operators)) {
+
+                $sql = "{$action} FROM {$table} WHERE {$field} {$operator} ? $order";
+
+                if (!$this->query($sql, [$value])->error()) {
+
+                    return $this;
+                }
+            }
+        }
     }
 
     /**
@@ -139,6 +183,7 @@ class Db extends CalculateAge
         return false;
     }
 
+
     /**
      * @param $table
      * @param $where
@@ -155,6 +200,25 @@ class Db extends CalculateAge
      */
     function findAll($table){
         return $this->action('SELECT *', $table);
+    }
+
+    /**
+     * @param $table
+     * @param $orderBy
+     * @return bool|Db
+     */
+    function findBy($table, $orderBy){
+        return $this->actionBy('SELECT *', $table, $orderBy);
+    }
+
+    /**
+     * @param $table
+     * @param $where
+     * @param $orderBy
+     * @return bool|Db
+     */
+    function findOneBy($table, $where, $orderBy){
+        return $this->actionOneBy('SELECT *', $table, $where, $orderBy);
     }
 
     /**
