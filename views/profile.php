@@ -3,7 +3,7 @@
 
     <div class="bg-light">
         <div class="d-none d-md-block" style="position: fixed; right: 10px; top: 300px; z-index: 10;">
-            <div class="ml-2 mb-2"><a href="{{route('sing_up')}}"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></a></div>
+            <div class="ml-2 mb-2"><a href=""><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></a></div>
             <div class="mb-3">
                 <a href=""><img src="images/images2.jpg" class="rounded-circle" style="height: 40px; width: 40px;"></a>
             </div>
@@ -25,7 +25,7 @@
                                     <div class="col-12 bg-light">
                                         <div class="row">
                                             <div class="mx-auto mt-4">
-                                                <a href="{{route('home')}}"><img src="images/Logo45.png" style="width: 150px; height: 30px; margin-bottom: 50px;"></a>
+                                                <a href=""><img src="images/Logo45.png" style="width: 150px; height: 30px; margin-bottom: 50px;"></a>
                                             </div>
                                         </div>
                                     </div>
@@ -187,7 +187,7 @@
 
                                         <ul class="navbar-nav firstNav">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="{{route('sing_up')}}"><i class="fa fa-heart fa-2x like" aria-hidden="true"></i></a>
+                                                <a class="nav-link" href=""><i class="fa fa-heart fa-2x like" aria-hidden="true"></i></a>
                                             </li>
 
                                             <li class="nav-item">
