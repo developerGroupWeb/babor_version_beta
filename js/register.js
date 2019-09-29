@@ -149,7 +149,7 @@ $(function () {
         }
     });
 
-    $(document).on('submit', '#form-register', function () {
+    /*$(document).on('submit', '#form-register', function () {
         let form = $(this),
          name = form.find('#name').val(),
          day = form.find('#day').val(),
@@ -192,5 +192,5 @@ $(function () {
             return false;
         }
 
-    });
+    });*/
 });

@@ -81,7 +81,7 @@ $(function(){
         }
     });
 
-    $(document).on('submit', '#form-login', function () {
+    /*$(document).on('submit', '#form-login', function () {
 
         let form = $(this);
         let email = form.find('#email').val();
@@ -100,7 +100,7 @@ $(function(){
             return false;
         }
 
-    });
+    });*/
 });
 
 
@@ -112,8 +112,7 @@ $(function(){
         let getInput = document.querySelector(input),
             queryAllFaEye = document.querySelectorAll('.input-group-prepend .fa-eye'),
             queryAllFaEyeSlash = document.querySelectorAll('.input-group-prepend .fa-eye-slash');
-        const attr = getInput.getAttribute('type')
-
+        const attr = getInput.getAttribute('type');
 
         if(attr === 'password'){
 
