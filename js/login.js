@@ -102,3 +102,35 @@ $(function(){
 
     });
 });
+
+
+//SCRIPT JAVASCRIPT
+   // SHOW AND HIDE PASSWORD FOR USER
+
+    const showHidePassword = (input) => {
+
+        let getInput = document.querySelector(input),
+            queryAllFaEye = document.querySelectorAll('.input-group-prepend .fa-eye'),
+            queryAllFaEyeSlash = document.querySelectorAll('.input-group-prepend .fa-eye-slash');
+        const attr = getInput.getAttribute('type')
+
+
+        if(attr === 'password'){
+
+            getInput.setAttribute('type', 'text');
+            for(let i = 0; i < queryAllFaEye.length; i++){
+                queryAllFaEye[i].classList.add('d-none');
+                queryAllFaEyeSlash[i].classList.remove('d-none');
+            }
+        }else{
+
+            getInput.setAttribute('type', 'password');
+            for(let i = 0; i < queryAllFaEye.length; i++) {
+                queryAllFaEye[i].classList.remove('d-none');
+                queryAllFaEyeSlash[i].classList.add('d-none');
+            }
+        }
+        //alert(queryAll.length)
+    };
+
+

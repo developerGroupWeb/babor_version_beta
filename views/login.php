@@ -59,10 +59,10 @@
                         <div class="form-group row">
                             <label for="password" class="">Mot de passe</label>
                             <div class="col-md-8 col-sm-12">
-                                <div class='input-group'>
+                                <div class='input-group' id="desk">
                                     <input type="password" name="password" class="form-control" id="password" value="<?= $validate->post('password')?>" placeholder="Mot de passe">
                                     <div class="input-group-prepend">
-                                        <div class="input-group-text"><i class="fa fa-eye" aria-hidden="true"></i><i class="fa fa-eye-slash" aria-hidden="true"></i></div>
+                                        <div class="input-group-text"><i class="fa fa-eye" aria-hidden="true" style="cursor:pointer;" onclick="showHidePassword('#desk #password')"></i><i class="fa fa-eye-slash d-none" aria-hidden="true" style="cursor:pointer;" onclick="showHidePassword('#desk #password')"></i></div>
                                     </div>
                                 </div>
                                 <span class="text-danger error-password font-italic"><?= $validate->error("password")?></span>
@@ -149,10 +149,10 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-12">
-                    <div class='input-group'>
+                    <div class='input-group' id="mobil">
                         <input type="password" name="password" class="form-control" id="password" value="<?= $validate->post('password')?>" placeholder="Mot de passe">
                         <div class="input-group-prepend">
-                            <div class="input-group-text"><i class="fa fa-eye" aria-hidden="true"></i><i class="fa fa-eye-slash" aria-hidden="true"></i></div>
+                            <div class="input-group-text"><i class="fa fa-eye" aria-hidden="true" style="cursor:pointer;" onclick="showHidePassword('#mobil #password')"></i><i class="fa fa-eye-slash d-none" aria-hidden="true" style="cursor:pointer;" onclick="showHidePassword('#mobil #password')"></i></div>
                         </div>
                     </div>
                         <span class="text-danger error-email font-italic"><?= $validate->error("password")?></span>
