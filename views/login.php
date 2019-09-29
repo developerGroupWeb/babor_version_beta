@@ -61,13 +61,13 @@
                             <div class="col-md-8 col-sm-12">
                                 <div class='input-group' id="desk">
                                     <input type="password" name="password" class="form-control" id="password" value="<?= $validate->post('password')?>" placeholder="Mot de passe">
-                                    <span class="text-danger error-password font-italic"><?= $validate->error("password")?></span>
+
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fa fa-eye" aria-hidden="true" style="cursor:pointer;" onclick="showHidePassword('#desk #password')"></i><i class="fa fa-eye-slash d-none" aria-hidden="true" style="cursor:pointer;" onclick="showHidePassword('#desk #password')"></i></div>
+                                    </div>
                                 </div>
 
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text"><i class="fa fa-eye" aria-hidden="true" style="cursor:pointer;" onclick="showHidePassword('#desk #password')"></i><i class="fa fa-eye-slash d-none" aria-hidden="true" style="cursor:pointer;" onclick="showHidePassword('#desk #password')"></i></div>
-                                </div>
-
+                                <span class="text-danger error-password font-italic"><?= $validate->error("password")?></span>
                             </div>
                         </div>
                         <div class="form-check my-4" style="margin-left: 100px;">
@@ -149,28 +149,30 @@
                         <span class="text-danger error-email font-italic"><?= $validate->error("email_or_phone")?></span>
                     </div>
                 </div>
+
                 <div class="form-group row">
                     <div class="col-12">
-                    <div class='input-group' id="mobil">
-                        <input type="password" name="password" class="form-control" id="password" value="<?= $validate->post('password')?>" placeholder="Mot de passe"/>
-                        <span class="text-danger error-password font-italic"><?= $validate->error("password")?></span>
-                    </div>
-
-                        <div class="input-group-prepend">
-                            <div class="input-group-text"><i class="fa fa-eye" aria-hidden="true" style="cursor:pointer;" onclick="showHidePassword('#mobil #password')"></i><i class="fa fa-eye-slash d-none" aria-hidden="true" style="cursor:pointer;" onclick="showHidePassword('#mobil #password')"></i></div>
+                        <div class='input-group row' id="mobil">
+                            <input type="password" name="password" class="form-control" id="password" value="<?= $validate->post('password')?>" placeholder="Mot de passe"/>
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fa fa-eye" aria-hidden="true" style="cursor:pointer;" onclick="showHidePassword('#mobil #password')"></i><i class="fa fa-eye-slash d-none" aria-hidden="true" style="cursor:pointer;" onclick="showHidePassword('#mobil #password')"></i></div>
+                            </div>
                         </div>
 
+                        <span class="text-danger error-password font-italic"><?= $validate->error("password")?></span>
                     </div>
                 </div>
                 <div class="form-check my-4">
                     <input class="form-check-input" type="checkbox" value="" id="check">
-                    <label class="form-check-label" for="check">
+                    <label class="form-check-label text-white" for="check">
                         Se souvenir de moi
                     </label>
                 </div>
                 <div class="col-10">
-                    <div class="row mx-auto">
-                        <button type="submit" name="login" class="btn btn-primary w-100" role="button">Se connecter</button>
+                    <div class="row">
+                        <div class='mx-auto'>
+                            <button type="submit" name="login" class="btn btn-primary px-5 font-weight-bold" role="button">Se connecter</button>
+                        </div>
                     </div>
                 </div>
                 <p class="mx-auto text-center p-2"><a href="?view=password_forget" style="color: #b6b6b6;">Mot de passe oublié ?</a></p>
