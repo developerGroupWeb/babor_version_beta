@@ -5,7 +5,7 @@
     $all = $db->findBy('users', 'ORDER BY id DESC');
     $users = $all->results();
 
-    // randomize the order in users table
+    /*randomize the order in users table*/
     shuffle($users);
 
     $first = $all->first();
