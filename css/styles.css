@@ -1,13 +1,11 @@
 body{
 	font-family: 'Open Sans' Helvetica, Arial, 'sans-serif';
-	background: red;
 }
 
 @media (min-width: 576px) {
 		.all-content{
 			background-image: url(../images/photo.jpg);
 		}
-
 	}
 
 .mobile-bg{
@@ -34,6 +32,11 @@ body{
 	}
 }
 
+.homepage{
+	-webkit-box-shadow: 2px 18px 27px -12px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 18px 27px -12px rgba(0,0,0,0.75);
+box-shadow: 2px 18px 27px -12px rgba(0,0,0,0.75);
+}
 
 .homepage .firtFace{
 	padding-top: 120px;
@@ -43,6 +46,7 @@ body{
 	border-top-left-radius: 15px;
 	border-bottom-left-radius: 15px;
 	background: #fff;
+	border: 1px solid #eee;
 }
 
 .homepage .firtFace-btn1 .btn{
@@ -219,6 +223,21 @@ body{
 	border-radius: 100px;
 	padding: 15px 18px 15px 18px;
 	border: 1px solid #b6b6b6;
+}
+
+#bg-profil{
+	position: relative;
+	height: 600px;
+	background-color: rgb(70, 69, 69);
+}
+
+#bg-profil .bg-profil-imgs{
+	margin: 0;
+	position: absolute;
+	top: 30%;
+	left: 30%;
+	-ms-transform: translate(-30%, -30%);
+	transform: translate(-30%, -30%);
 }
 
 /**---------------------------------------------------------------------*/

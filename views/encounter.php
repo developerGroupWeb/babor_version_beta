@@ -202,13 +202,18 @@
 
 
                             <div class="col-12">
-                                <div class="row">
-                                    <div class="mb-5" style=" background-color: #333;">
-                                        <img src="images/imag.jpg" class=" mx-auto b-block" style="">
+                                <div class="row" id='bg-profil'>
+                                    <div class="col-12">
+                                        <div class='row'>
+                                            <div class='bg-profil-imgs'>
+                                                <img src="images/imfine.jpg" class="img-fluid">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <hr class="row">
+
                                 <footer class="row">
                                     <div class="col-12 bg-white">
                                         <div class="row">
@@ -315,9 +320,13 @@
 
 
                     <div class="col-12">
-                        <div class="row">
-                            <div class="mb-5" style=" background-color: #333;">
-                                <img src="images/imag.jpg" class=" mx-auto b-block" style="">
+                        <div class="row" id='bg-profil'>
+                            <div class="col-12">
+                                <div class='row'>
+                                    <div class='bg-profil-imgs'>
+                                        <img src="images/imfine.jpg" class="img-fluid">
+                                    </div>
+                                </div>
                             </div>
                         </div>
 

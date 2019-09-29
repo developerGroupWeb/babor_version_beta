@@ -1,5 +1,33 @@
 
-    <br/><a class='btn btn-group-lg btn-info' href='?view=logout'>Log out</a><br/><br/>
+ 
+    <div class="d-none d-sm-block singin-nav" style="background: #9d1e65;">
+        <div class="px-5">
+            <nav class="row navbar navbar-expand-sm font-weight-bold">
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav col">
+                        <li class="nav-item d-none d-lg-block">
+                            <a class="nav-link" href="#" style="color: #111; background: #eee; padding: 5px 20px 5px 20px; border-radius: 10px;">Fr</a>
+                        </li>
+                        <li class="nav-item d-block d-lg-none">
+                            <a class="navbar-brand" href="index.php" style="color: #fff;"><img src="images/Logo45.png"></a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav col">
+                        <li class="nav-item d-none d-lg-block">
+                            <a class="navbar-brand" href="index.php" style="color: #fff;"><img src="images/Logo45.png"></a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="?view=logout" style="color: #111; background: #eee; padding: 5px 20px 5px 20px; border-radius: 10px;">Log out</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
 
     <div class="bg-light">
         <div class="d-none d-md-block" style="position: fixed; right: 10px; top: 300px; z-index: 10;">
@@ -15,139 +43,84 @@
             </div>
             <div class="ml-2 mb-2"><a href="{{route('sing_up')}}"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></a></div>
         </div>
+        
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 d-none d-lg-block" style="">
-                    <div class="row pb-5">
+                <div class="col-lg-3">
+                    <div class="row">
                         <div class="singupBox_encounters">
                             <div class="col-12" >
                                 <div class="row position-fixed" style="z-index: 10; width: 280px; height: 80px;">
                                     <div class="col-12 bg-light">
-                                        <div class="row">
-                                            <div class="mx-auto mt-4">
-                                                <a href=""><img src="images/Logo45.png" style="width: 150px; height: 30px; margin-bottom: 50px;"></a>
-                                            </div>
+                                        <div class="row mt-3">
+                                                <a href="" class='col-3'><img src="images/avatar.png" class='img-fluid' ></a>
+
+                                                <a href="" class="nav-link text-dark col-9">
+                                                    <span class='font-weight-bold'><?=$user->name?></span>
+                                                </a>
+                                        </div>
+
+                                        <hr class='row bg-secondary my-5'>
+
+                                        <div class='row'>
+                                            <a href="" class='nav-link active text-dark'>Rencontre</a>
+
+                                            <button type="button" class="btn btn-light ml-auto border" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Forms pour filtrer une recherche">
+                                                <i class="fa fa-sliders" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+
+                                        <script>
+                                            $(function () {
+                                                $('[data-toggle="popover"]').popover()
+                                            })
+                                        </script>
+
+                                        <div class='row my-2'>
+                                            <a href="" class='nav-link text-dark'>Trouver à coté</a>
+
+                                            <button type="button" class="btn btn-light ml-auto border d-none" data-container="body"               data-toggle="popover" data-placement="bottom" data-content="Vivamus
+                                                sagittis lacus vel augue laoreet rutrum faucibus.">
+                                                <i class="fa fa-sliders" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class='row'>
+                                            <a href="" class='nav-link text-dark'>En ligne</a>
+                                        </div>
+                                        <div class='row my-2'>
+                                            <a href="" class='nav-link text-dark'>Messages</a>
+                                        </div>
+                                        <div class='row'>
+                                            <a href="" class='nav-link text-dark'>Réciproque</a>
+                                        </div>
+                                        <div class='row mt-2'>
+                                            <a href="" class='nav-link text-dark'>Elle vous like</a>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="row" style="padding-top: 85px;">
-                                    <div class="col">
-                                        <div class="row singin-btn1">
-                                            <a class="btn mb-3 mx-auto bg-dark" href="#" role="button"><i style="margin-right: 8px;" class="fa fa-facebook-official" aria-hidden="true"></i> <small class="font-weight-bold">Facebook</small></a>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="row singin-btn2">
-                                            <a class="btn mx-auto bg-warning" href="#" role="button"><i style="margin-left: -10px;" class="fa fa-google" aria-hidden="true"></i> <small class="font-weight-bold"></small></a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row mb-4">
-                                    <h4 class="mx-auto">Crée un profil</h4>
-                                </div>
-                                <div class="row mb-3">
-                                    <form class="col-sm-12" method="post" action="">
-                                        <div class="form-group row mb-4">
-                                            <div class="col-sm-12">
-                                                <input type="text" class="row form-control" id="name" placeholder="Prénom">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row mb-4">
-                                            <div class="col-sm-4">
-                                                <select class="row form-control">
-                                                    <option>Jour...</option>
-                                                    <option>01</option>
-                                                    <option>02</option>
-                                                    <option>03</option>
-                                                    <option>04</option>
-                                                    <option>05</option>
-                                                    <option>06</option>
-                                                    <option>07</option>
-                                                    <option>08</option>
-                                                    <option>09</option>
-                                                    <option>10</option>
-                                                    <option>11</option>
-                                                    <option>12</option>
-                                                    <option>13</option>
-                                                    <option>14</option>
-                                                    <option>15</option>
-                                                    <option>16</option>
-                                                    <option>17</option>
-                                                    <option>18</option>
-                                                    <option>19</option>
-                                                    <option>20</option>
-                                                    <option>21</option>
-                                                    <option>22</option>
-                                                    <option>23</option>
-                                                    <option>24</option>
-                                                    <option>25</option>
-                                                    <option>26</option>
-                                                    <option>27</option>
-                                                    <option>28</option>
-                                                    <option>29</option>
-                                                    <option>30</option>
-                                                    <option>31</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <select class="row form-control">
-                                                    <option>Mois...</option>
-                                                    <option>janvier</option>
-                                                    <option>février</option>
-                                                    <option>mars</option>
-                                                    <option>avril</option>
-                                                    <option>mai</option>
-                                                    <option>juin</option>
-                                                    <option>juillet</option>
-                                                    <option>août</option>
-                                                    <option>septembre</option>
-                                                    <option>octobre</option>
-                                                    <option>novembre</option>
-                                                    <option>décembre</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <input type="text" class="row form-control" id="name" placeholder="Année...">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row mb-4">
-                                            <div class="col-sm-12">
-                                                <input type="search" class="row form-control" id="name" placeholder="Saisir ton emplacement">
-                                                <small id="emailHelp" class="form-text text-muted ml-3">p. ex. cotonou, Benin</small>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row mb-4">
-                                            <div class="col-sm-12">
-                                                <input type="email" class="row form-control" id="email" placeholder="E-mail ou numéro de téléphone">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <div class="col-sm-12">
-                                                <input type="password" class="row form-control" id="password" placeholder="Crée ton mot de passe">
-                                                <small id="emailHelp" class="form-text text-muted ml-3">Le mot de passe doit comprendre au moins 5 caractères</small>
-                                            </div>
-                                        </div>
-
-                                        <div class="singin-btn-validate" style="margin-left: 50px;">
-                                            <button type="submit" class="btn px-4" role="button">S'inscrire</button>
-                                        </div>
-                                        <p style="margin-left: 50px;" class="mt-2"><a href="" style="color: #b6b6b6;">Mot de passe oublié ?</a></p>
-                                    </form>
-                                </div>
-                                <small class="row text-center" style="font-size: 10px; text-align: center;">En continuant, tu confirmes avoir lu et accepté nos Conditions Générales d'Utilisation, notre Politique de Confidentialité ainsi que notre Politique en matière de Cookies</small>
-
-                                <div class="row">
-                                    <p class="mx-auto mt-2">Déjà membre ? <a href="singin.php">Connecte-toi</a></p>
-                                </div>
-                            </div>
+                            </div>  
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-9 d-none d-sm-block bg-white" style="">
-                    <div class="row">
+                <div class="col-lg-9 bg-white">
+                    <div class='row' style='height: 600px;'>
+                        <div class='col-md-7'>
+                            <div class="row" id='bg-profil'>
+                                <div class='bg-profil-imgs'>
+                                    <img src="images/imfine.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='col-md-4'>
+                            <h5><a href="" class="nav-link text-dark">
+                                <span></span>
+                                <span></a>
+                            </h5>
+                        </div>
+                    </div>
+                    <!--<div class="row">
                         <header class="col-12">
                             <div class="row d-none d-sm-block d-lg-none">
                                 <nav class="col-12 navbar navbar-expand-sm navbar-light">
@@ -254,8 +227,7 @@
                                         </div>
                                         <div class="col-4 col-md-2">
                                             <div class="row">
-                                                <img src="images/images.jpg
-" class="w-100" style="height: 150px;">
+                                                <img src="images/images.jpg" class="w-100" style="height: 150px;">
                                             </div>
                                         </div>
                                         <div class="col-4 col-md-2">
@@ -356,26 +328,29 @@
                                 </div>
                             </div>
 
-                            <hr class="row">
-                            <footer class="row">
-                                <div class="col-12 bg-white">
-                                    <div class="row">
-                                        <div class="footerContent">
-                                            <a href="">A propos</a>
-                                            <a href="">CGU</a>
-                                            <a href="">Confidentialité</a>
-                                            <a href="">Liens rapides</a>
-                                            <a href="">Aide</a>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <small class="ml-auto pr-4 pb-4 font-weight-bold">2018 © Babor</small>
-                                    </div>
-                                </div>
-                            </footer>
+                            
                         </div>
-                    </div>
+                    </div>-->
+
+                    <hr class="row">
+
+                    <footer class="row">
+                        <div class="col-12 bg-white">
+                            <div class="row">
+                                <div class="footerContent">
+                                    <a href="">A propos</a>
+                                    <a href="">CGU</a>
+                                    <a href="">Confidentialité</a>
+                                    <a href="">Liens rapides</a>
+                                    <a href="">Aide</a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <small class="ml-auto pr-4 pb-4 font-weight-bold">2018 © Babor</small>
+                            </div>
+                        </div>
+                    </footer>
                 </div>
             </div>
         </div>
