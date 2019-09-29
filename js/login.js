@@ -72,10 +72,10 @@ $(function(){
         let pass = $(this).val();
 
         if(pass === ''){
-            alertMessage(this, '.error-password', 'Field password is required');
+            $('.error-password').html('Field password is required').show('slow');
             error_pass = false;
         }else if(pass.length < 8){
-            alertMessage(this, '.error-password', 'Password must be at least 8 characters long');
+            $('.error-password').html('Password must be at least 8 characters long').show('slow');
             error_pass = false;
         }else {
             deleteMessage('.error-password');
