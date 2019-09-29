@@ -67,8 +67,10 @@ $(function(){
 
     });
 
-    $(document).on('blur', '#password', function () {
+    $(document).on('keyup', '#password', function () {
+
         let pass = $(this).val();
+
         if(pass === ''){
             alertMessage(this, '.error-password', 'Field password is required');
             error_pass = false;

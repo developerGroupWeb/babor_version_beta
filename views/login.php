@@ -61,11 +61,13 @@
                             <div class="col-md-8 col-sm-12">
                                 <div class='input-group' id="desk">
                                     <input type="password" name="password" class="form-control" id="password" value="<?= $validate->post('password')?>" placeholder="Mot de passe">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text"><i class="fa fa-eye" aria-hidden="true" style="cursor:pointer;" onclick="showHidePassword('#desk #password')"></i><i class="fa fa-eye-slash d-none" aria-hidden="true" style="cursor:pointer;" onclick="showHidePassword('#desk #password')"></i></div>
-                                    </div>
+                                    <span class="text-danger error-password font-italic"><?= $validate->error("password")?></span>
                                 </div>
-                                <span class="text-danger error-password font-italic"><?= $validate->error("password")?></span>
+
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-eye" aria-hidden="true" style="cursor:pointer;" onclick="showHidePassword('#desk #password')"></i><i class="fa fa-eye-slash d-none" aria-hidden="true" style="cursor:pointer;" onclick="showHidePassword('#desk #password')"></i></div>
+                                </div>
+
                             </div>
                         </div>
                         <div class="form-check my-4" style="margin-left: 100px;">
@@ -150,12 +152,14 @@
                 <div class="form-group row">
                     <div class="col-12">
                     <div class='input-group' id="mobil">
-                        <input type="password" name="password" class="form-control" id="password" value="<?= $validate->post('password')?>" placeholder="Mot de passe">
+                        <input type="password" name="password" class="form-control" id="password" value="<?= $validate->post('password')?>" placeholder="Mot de passe"/>
+                        <span class="text-danger error-password font-italic"><?= $validate->error("password")?></span>
+                    </div>
+
                         <div class="input-group-prepend">
                             <div class="input-group-text"><i class="fa fa-eye" aria-hidden="true" style="cursor:pointer;" onclick="showHidePassword('#mobil #password')"></i><i class="fa fa-eye-slash d-none" aria-hidden="true" style="cursor:pointer;" onclick="showHidePassword('#mobil #password')"></i></div>
                         </div>
-                    </div>
-                        <span class="text-danger error-email font-italic"><?= $validate->error("password")?></span>
+
                     </div>
                 </div>
                 <div class="form-check my-4">
