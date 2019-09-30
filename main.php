@@ -6,7 +6,7 @@ include 'includes/autoload_classes.php';
 
 
 <!--All content pour mobile screen-->
-<div class="d-block d-sm-none mobile-bg" style="height: 100vh;">
+<!--<div class="d-block d-sm-none mobile-bg" style="height: 100vh;">
     <div class="container">
         <div class="row homepage_mob">
             <div class="col-12">
@@ -73,12 +73,12 @@ include 'includes/autoload_classes.php';
 
 
 <!--content body on desktop-->
-<div class=" d-none d-sm-block mt-4">
+<div class="mt-md-4">
     <div class="container">
         <div class="row">
-            <div class="col-md-10 offset-md-1 homepage ">
+            <div class="col-md-10 offset-md-1 homepage">
                 <div class="row ">
-                    <div class="col-12 col-lg-6 firtFace order-sm-last order-lg-first">
+                    <div class="col-12 col-lg-6 firtFace order-last order-lg-first">
                         <div class="row">
                             <div class="col-11" >
                                 <div class="row text-center">
@@ -110,7 +110,7 @@ include 'includes/autoload_classes.php';
                         </div>
                     </div>
 
-                    <div class="col-12 col-lg-6 secondFace order-sm-first order-lg-last">
+                    <div class="col-12 col-lg-6 secondFace order-first order-lg-last">
                         <div class="row secondFace-home" style="padding-top: 120px; padding-bottom: 100px;">
                             <div class="col-12">
                                 <div class="row text-center">
@@ -134,21 +134,23 @@ include 'includes/autoload_classes.php';
                                 <div class="row d-block d-lg-none">
                                     <div class="col-12">
                                         <div class="row">
-                                            <p class="my-4 mx-auto font-weight-bold">ou</p>
+                                            <p class="my-4 mx-auto d-none d-lg-block font-weight-bold">ou</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="alert alert-info error-save"></div>
-                        <div class="row singupPage-home" style="padding-bottom: 50px; padding-top: 50px; padding-left: 50px;">
+
+                        <div class="row singupPage-home py-5 pl-sm-5">
                             <div class="col-12">
                                 <div class="row mb-4">
                                     <span style="cursor: pointer;" class="bg-light px-3 py-1 rounded-circle mr-5 go-backHome"><i class="fa fa-angle-left fa-2x" aria-hidden="true"></i></span>
-                                    <h3>Bientôt fini...</h3>
+                                    <h3 class='h3'>Bientôt fini...</h3>
                                 </div>
                                 <div class="row mb-3">
-                                    <form class="col-sm-12" method="post" action="" id="form-register">
+                                    <form class="col-12" method="post" action="" id="form-register">
                                         <div class="form-group row mb-4">
                                             <div class="col-sm-12">
                                                 <input type="text" class="row form-control" id="name" name="name" value="<?= $validate->post('name')?>" placeholder="Prénom" pattern="^-?[a-zA-Z\ ]+$"/>
@@ -208,10 +210,12 @@ include 'includes/autoload_classes.php';
                                         <div class="singin-btn-validate">
                                             <button type="submit" class="btn col-12 row text-white font-weight-bold" role="button">Créer un profil</button>
                                         </div>
-                                        <p style="margin-left: 90px;" class="mt-2"><a href="" style="color: #b6b6b6;">Mot de passe oublié ?</a></p>
+                                        <p class="mt-2 text-center"><a href="" style="color: #333;">Mot de passe oublié ?</a></p>
                                     </form>
                                 </div>
-                                <small class="row text-center" style="font-size: 11px; text-align: center;">En continuant, tu confirmes avoir lu et accepté nos <a href="">Conditions Générales d'Utilisation</a>, notre <a href=""> Politique de Confidentialité</a> ainsi que notre <a href=""> Politique en matière de Cookies</a></small>
+                                <div class='row'>
+                                    <small class="text-center" style="font-size: 11px;">En continuant, tu confirmes avoir lu et accepté nos <a href="">Conditions Générales d'Utilisation</a>, notre <a href=""> Politique de Confidentialité</a> ainsi que notre <a href=""> Politique en matière de Cookies</a></small>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -222,14 +226,14 @@ include 'includes/autoload_classes.php';
                 <footer class="row">
                     <div class="col-12">
                         <div class="row">
-                            <a class="mx-auto" href="" title="Télécharger babor sur google play"><img src="images/googleplaylogo.png" style="width: 250px; height: 150px;"></a>
+                            <a class="mx-auto" href="" title="Télécharger babor sur google play"><img src="images/googleplaylogo.png" style="width: 200px; height: 120px;"></a>
                         </div>
                         <hr class="bg-dark">
                     </div>
 
                     <div class="col-12">
                         <div class="row">
-                            <div class="footerContent">
+                            <div class="footerContent text-center">
                                 <a href="">A propos</a>
                                 <a href="">CGU</a>
                                 <a href="">Confidentialité</a>
@@ -239,7 +243,7 @@ include 'includes/autoload_classes.php';
                         </div>
 
                         <div class="row">
-                            <small class="ml-auto pr-4 pb-4 font-weight-bold">2018 © Babor</small>
+                            <small class="mx-auto ml-md-auto pr-4 pb-4 font-weight-bold">2018 © Babor</small>
                         </div>
                     </div>
                 </footer>

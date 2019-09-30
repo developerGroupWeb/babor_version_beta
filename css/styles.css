@@ -8,12 +8,12 @@ body{
 		}
 	}
 
-.mobile-bg{
-	background: #C04848;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to top, #480048, #C04848);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to top, #480048, #C04848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/*.mobile-bg{
+	background: #C04848;  /* fallback for old browsers
+	background: -webkit-linear-gradient(to top, #480048, #C04848);  /* Chrome 10-25, Safari 5.1-6 
+	background: linear-gradient(to top, #480048, #C04848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
 
-}
+}*/
 
 .navbar-brand img{
 	width: 200px;
@@ -140,10 +140,6 @@ box-shadow: 2px 18px 27px -12px rgba(0,0,0,0.75);
 	background: #00c6ff;
 }
 
-.footerContent{
-	display: inline-flex;
-}
-
 .footerContent a{
 	padding: 20px;
 	color: rgb(0,0,0,0.8);
@@ -261,6 +257,56 @@ box-shadow: 2px 18px 27px -12px rgba(0,0,0,0.75);
 	.homepage_mob .footer a:hover{
 		text-decoration: none;
 		color: #333;
+	}
+
+	.homepage .firtFace{
+		padding-top: 80px;
+		padding-bottom: 80px;
+		border-bottom-left-radius: 12px;
+		border-bottom-right-radius: 12px;
+		border-top-left-radius: 0px;
+		background: #eee;
+	}
+
+	.homepage .secondFace{
+		padding-top: 80px;
+		padding-bottom: 0px;
+		border-top-right-radius: 12px;
+		border-top-left-radius: 12px;
+		border-bottom-right-radius: 0px;
+		background: #fff;
+	}
+
+	.homepage .firtFace-btn1 .btn{
+		padding: 8px 20px 10px 20px;
+		font-size: 16px;
+	}
+	
+	.homepage .firtFace-btn2 .btn{
+		padding: 8px 30px 10px 30px;
+		font-size: 16px;
+	}
+
+	.homepage .secondFace-btn1 .btn{
+		padding: 7px 80px 7px 80px;
+		font-size: 16px;
+	}
+	
+	.homepage .secondFace-btn2 .btn{
+		padding: 7px 82px 7px 82px;
+		font-size: 16px;
+	}
+
+	.homepage h3{
+		font-size: 21px;
+	}
+
+	.singupPage-home .h3{
+		font-size: 20px;
+	}
+
+	.homepage .secondFace{
+		padding-right: 10px;
 	}
 	
 }

@@ -133,7 +133,7 @@
             <div class="col-12">
                 <div class="row">
                     <div class="mx-auto mt-4 d-inline-flex">
-                        <img src="images/Logo45.png" style="width: 150px; height: 30px; margin-bottom: 80px;">
+                        <a href="index.php"><img src="images/Logo45.png" style="width: 150px; height: 30px; margin-bottom: 80px;"></a> 
                     </div>
                 </div>
             </div>

@@ -21,20 +21,43 @@ include 'url_path.php';
 <div class="all-content"><!--all content here. Important!-->
 
     <!--navbar on mobile-->
+    <div class="d-block d-sm-none">
+        <nav class=" col-12  font-weight-bold">
+            <div class='row mt-3'>
+                <a class="navbar-brand mx-auto" href="index.php"><img src="images/Logo45.png"></a>
+            </div>
+
+            <div class="row bg-light">
+                <ul class="navbar nav col-12 text-center">
+                        <li class="nav-item col-4">
+                            <a class="nav-link" href="<?=(isset($path))? $path : ''?>=encounter" style="color: #f80759;"><span><i class="fa fa-heart-o" aria-hidden="true"></i></span></a>
+                        </li>
+                        <li class="nav-item col-4">
+                            <a class="nav-link" href="<?=(isset($path))? $path : ''?>=dating" style="color: #f80759;"><span><i class="fa fa-globe" aria-hidden="true"></i></span></a>
+                        </li>
+                        <li class="nav-item col-4">
+                            <a class="nav-link" href="<?=(isset($path))? $path : ''?>=login" style="color: #f80759;"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+                        </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!--navbar on tablette-->
     <div class="d-none d-sm-block d-md-none">
-        <nav class="navbar navbar-expand bg-tranparent font-weight-bold">
-            <a class="navbar-brand" href="#" style="color: #fff;"><img src="images/Logo45.png"></a>
+        <nav class="navbar navbar-expand  font-weight-bold">
+            <a class="navbar-brand" href="index.php" style="color: #fff;"><img src="images/Logo45.png"></a>
 
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="encounters.php" style="color: #fff;"><span><i class="fa fa-heart-o" aria-hidden="true"></i></span></a>
+                        <a class="nav-link" href="<?=(isset($path))? $path : ''?>=encounter" style="color: #fff;"><span><i class="fa fa-heart-o" aria-hidden="true"></i></span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" style="color: #fff;"><span><i class="fa fa-globe" aria-hidden="true"></i></span></a>
+                        <a class="nav-link" href="<?=(isset($path))? $path : ''?>=dating" style="color: #fff;"><span><i class="fa fa-globe" aria-hidden="true"></i></span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="singin.php" style="color: #fff;"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+                        <a class="nav-link" href="<?=(isset($path))? $path : ''?>=loginsingin.php" style="color: #fff;"><i class="fa fa-user-o" aria-hidden="true"></i></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" style="color: #111; background: #eee; padding: 5px 20px 5px 20px; border-radius: 10px;">Fr</a>
@@ -46,7 +69,7 @@ include 'url_path.php';
 
     <!--navbar on large screen-->
     <div class="px-5 d-none d-md-block">
-        <nav class="row navbar navbar-expand-md bg-tranparent font-weight-bold">
+        <nav class="row navbar navbar-expand-md  font-weight-bold">
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav col">
                     <li class="nav-item">
