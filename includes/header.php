@@ -57,7 +57,7 @@ include 'url_path.php';
                         <a class="nav-link" href="<?=(isset($path))? $path : ''?>=dating" style="color: #fff;"><span><i class="fa fa-globe" aria-hidden="true"></i></span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?=(isset($path))? $path : ''?>=loginsingin.php" style="color: #fff;"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+                        <a class="nav-link" href="<?=(isset($path))? $path : ''?>=login" style="color: #fff;"><i class="fa fa-user-o" aria-hidden="true"></i></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" style="color: #111; background: #eee; padding: 5px 20px 5px 20px; border-radius: 10px;">Fr</a>
