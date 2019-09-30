@@ -1,6 +1,8 @@
 <?php
-$all = $db->findAll('users');
-$users = $all->results();
+  require_once 'controllers/register.php';
+
+    $all = $db->findBy('users', 'ORDER BY id DESC');
+    $users = $all->results();
 
 
 
