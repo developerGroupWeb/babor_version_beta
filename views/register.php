@@ -210,10 +210,10 @@
         </div>
         <div class="col-12">
             <div class="row">
-                <button class="btn btn-primary w-100 mr-4" name="login" role="button">Se connecter</button>
+                <button type="submit" class="btn btn-primary w-100 mr-4" name="login" role="button">Se connecter</button>
             </div>
         </div>
-        <p class="mx-auto text-center p-2"><a href="" style="color: #b6b6b6;">Mot de passe oublié ?</a></p>
+        <p class="mx-auto text-center p-2"><a href="?view=password_forget" style="color: #b6b6b6;">Mot de passe oublié ?</a></p>
     </form>
 
     <div class="row">

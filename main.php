@@ -22,12 +22,12 @@ include 'includes/autoload_classes.php';
             </div>
             <div class="col-12">
                 <div class="row btn-mob1">
-                    <a class="btn mb-2 mx-auto btn btn-outline-warning" href="#" role="button">Homme</a>
+                    <a class="btn mb-2 mx-auto btn btn-outline-warning" id="male" value="male" role="button">Homme</a>
                 </div>
             </div>
             <div class="col-12">
                 <div class="row btn-mob2">
-                    <a class="btn mx-auto btn btn-outline-warning" href="#" role="button">Femme</a>
+                    <a class="btn mx-auto btn btn-outline-warning" id="female" value="female" role="button">Femme</a>
                 </div>
             </div>
             <div class="col-12">

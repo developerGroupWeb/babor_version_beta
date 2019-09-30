@@ -1,6 +1,6 @@
 
 <?php
-    include 'register.php';
+    require_once 'register.php';
 
     $all = $db->findBy('users', 'ORDER BY id DESC');
     $users = $all->results();

@@ -103,9 +103,9 @@
                                     </div>
                                 </div>
                                 <div class="singin-btn-validate" style="margin-left: 50px;">
-                                    <button type="submit" class="btn btn-primary" role="button">S'inscrire</button>
+                                    <button type="submit" name="register" class="btn btn-primary" role="button">S'inscrire</button>
                                 </div>
-                                <p style="margin-left: 50px;" class="mt-2"><a href="" style="color: #b6b6b6;">Mot de passe oublié ?</a></p>
+                                <p style="margin-left: 50px;" class="mt-2"><a href="?view=password_forget" style="color: #b6b6b6;">Mot de passe oublié ?</a></p>
                             </form>
                         </div>
                         <small class="row text-center" style="font-size: 10px; text-align: center;">En continuant, tu confirmes avoir lu et accepté nos Conditions Générales d'Utilisation, notre Politique de Confidentialité ainsi que notre Politique en matière de Cookies</small>
