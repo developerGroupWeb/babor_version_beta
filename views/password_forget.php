@@ -39,14 +39,14 @@
     <?php include 'includes/message_flash.php'?>
 
     <div class="col-lg-6 offset-lg-3 col-sm-8 offset-sm-2 singin-content pb-5">
-        <div class="row">
-            <div class="col-md-9 col-sm-12">
+        <div class="row my-5">
+            <div class="col-md-9 col-sm-12 my-5">
 
                 <div class="row">
-                    <h4>Connecte-toi sur Badoo</h4>
+                    <h4 class='mx-auto'>Récupérez votre mot de pass Badoo</h4>
                 </div>
-                <div class="row mr-5">
-                    <p>Saisis identifiant de connexion. <a href="?view=register">Inscris-toi ici</a> si ce n'est pas encore fait !</p>
+                <div class="row">
+                    <p class='mx-auto'>Saisir identifiant de connexion.</p>
                 </div>
                 <div class="row">
                     <form method="post" action="" class="col-sm-12" id="form-reset">
@@ -58,14 +58,8 @@
                             </div>
                         </div>
 
-                        <div class="form-check my-4" style="margin-left: 100px;">
-                            <input class="form-check-input" type="checkbox" value="" id="check">
-                            <label class="form-check-label" for="check">
-                                Se souvenir de moi
-                            </label>
-                        </div>
                         <div class="singin-btn-validate" style="margin-left: 100px;">
-                            <button type="submit" name="forget_pass"  class="btn font-weight-bold" role="button">Continuer</button>
+                            <button type="submit" name="forget_pass"  class="btn font-weight-bold" role="button">Récupérer</button>
                         </div>
 
                     </form>
@@ -73,28 +67,12 @@
                 </div>
 
             </div>
-            <div class="col-md-3 col-sm-12 box2">
-                <p class="my-4 text-center">Se connecter avec :</p>
-                <div class="row">
-                    <div class="col-md-12 col">
-                        <div class="row singin-btn1">
-                            <a class="btn mb-3 mx-auto bg-dark" href="#" role="button"><i style="margin-right: 8px;" class="fa fa-facebook-official" aria-hidden="true"></i> <small class="font-weight-bold">Facebook</small></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 col">
-                        <div class="row singin-btn2">
-                            <a class="btn mx-auto bg-warning" href="#" role="button"><i style="margin-left: -10px; margin-right: 10px;" class="fa fa-google" aria-hidden="true"></i> <small class="font-weight-bold">Google</small></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 
-    <div class="container">
-        <hr>
+    <div class="container mt-5">
+        <hr class='row'>
+
         <footer class="row">
             <div class="col-12 bg-white">
                 <div class="row">
@@ -132,6 +110,9 @@
 
         <div class="row pl-4">
             <form method="post" action="" class="col-12" id="form-reset">
+                <div class="row">
+                    <p class='mx-auto'>Saisir identifiant de connexion.</p>
+                </div>
                 <div class="form-group row mb-4">
                     <div class="col-12">
                         <input type="text" name="email_or_phone" class="row form-control" id="email" value="<?= $validate->post('email_or_phone')?>" placeholder="E-mail ou numéro de téléphone">
@@ -139,15 +120,9 @@
                     </div>
                 </div>
 
-                <div class="form-check my-4">
-                    <input class="form-check-input" type="checkbox" value="" id="check">
-                    <label class="form-check-label" for="check">
-                        Se souvenir de moi
-                    </label>
-                </div>
                 <div class="col-10">
                     <div class="row mx-auto">
-                        <button type="submit" name="forget_pass" class="btn btn-primary w-100" role="button">Continuer</button>
+                        <button type="submit" name="forget_pass" class="btn btn-primary w-100" role="button">Récupérez</button>
                     </div>
                 </div>
                <br/>
@@ -155,7 +130,7 @@
         </div>
 
         <div class="row">
-            <a href="index.php"><div class="mx-auto bg-light px-3 py-1 rounded-circle go-backHome"><a href="index.php"><i class="fa fa-angle-left fa-2x" aria-hidden="true"></i></div></a></a>
+            <a href="<?=(isset($path))? $path : ''?>=login"><div class="mx-auto bg-light px-3 py-1 rounded-circle go-backHome"><a href="index.php"><i class="fa fa-angle-left fa-2x" aria-hidden="true"></i></div></a></a>
 
         </div>
     </div>

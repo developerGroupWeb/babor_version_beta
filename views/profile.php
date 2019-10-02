@@ -46,78 +46,80 @@
         
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-md-4 col-lg-3">
                     <div class="row">
-                        <div class="singupBox_encounters">
-                            <div class="col-12" >
-                                <div class="row position-fixed" style="z-index: 10; width: 280px; height: 80px;">
-                                    <div class="col-12 bg-light">
-                                        <div class="row mt-3">
-                                                <a href="" class='col-3'><img src="images/avatar.png" class='img-fluid' ></a>
 
-                                                <a href="" class="nav-link text-dark col-9">
-                                                    <span class='font-weight-bold'><?=$user->name?></span>
-                                                </a>
-                                        </div>
+                        <div class="col-12 bg-light">
+                            <div class="row mt-3">
+                                    <a href="" class='col-3'><img src="images/avatar.png" class='img-fluid' ></a>
 
-                                        <hr class='row bg-secondary my-5'>
+                                    <a href="" class="nav-link text-dark col-9">
+                                        <span class='font-weight-bold'><?=$user->name?></span>
+                                    </a>
+                            </div>
 
-                                        <div class='row'>
-                                            <a href="" class='nav-link active text-dark'>Rencontre</a>
+                            <hr class='row bg-secondary my-5'>
 
-                                            <button type="button" class="btn btn-light ml-auto border" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Forms pour filtrer une recherche">
-                                                <i class="fa fa-sliders" aria-hidden="true"></i>
-                                            </button>
-                                        </div>
+                            <div class='row'>
+                                <a href="" class='nav-link active text-dark'>Rencontre</a>
 
-                                        <script>
-                                            $(function () {
-                                                $('[data-toggle="popover"]').popover()
-                                            })
-                                        </script>
+                                <button type="button" class="btn btn-light ml-auto border" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Forms pour filtrer une recherche">
+                                    <i class="fa fa-sliders" aria-hidden="true"></i>
+                                </button>
+                            </div>
 
-                                        <div class='row my-2'>
-                                            <a href="" class='nav-link text-dark'>Trouver à coté</a>
+                            <script>
+                                $(function () {
+                                    $('[data-toggle="popover"]').popover()
+                                })
+                            </script>
 
-                                            <button type="button" class="btn btn-light ml-auto border d-none" data-container="body"               data-toggle="popover" data-placement="bottom" data-content="Vivamus
-                                                sagittis lacus vel augue laoreet rutrum faucibus.">
-                                                <i class="fa fa-sliders" aria-hidden="true"></i>
-                                            </button>
-                                        </div>
-                                        <div class='row'>
-                                            <a href="" class='nav-link text-dark'>En ligne</a>
-                                        </div>
-                                        <div class='row my-2'>
-                                            <a href="" class='nav-link text-dark'>Messages</a>
-                                        </div>
-                                        <div class='row'>
-                                            <a href="" class='nav-link text-dark'>Réciproque</a>
-                                        </div>
-                                        <div class='row mt-2'>
-                                            <a href="" class='nav-link text-dark'>Elle vous like</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>  
-                        </div>
+                            <div class='row my-2'>
+                                <a href="" class='nav-link text-dark'>Trouver à coté</a>
+
+                                <button type="button" class="btn btn-light ml-auto border d-none" data-container="body"               data-toggle="popover" data-placement="bottom" data-content="Vivamus
+                                    sagittis lacus vel augue laoreet rutrum faucibus.">
+                                    <i class="fa fa-sliders" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <div class='row'>
+                                <a href="" class='nav-link text-dark'>En ligne</a>
+                            </div>
+                            <div class='row my-2'>
+                                <a href="" class='nav-link text-dark'>Messages</a>
+                            </div>
+                            <div class='row'>
+                                <a href="" class='nav-link text-dark'>Réciproque</a>
+                            </div>
+                            <div class='row my-2'>
+                                <a href="" class='nav-link text-dark'>Elle vous like</a>
+                            </div>
+                            <div class='row'>
+                                <a href="?view=logout" class='nav-link text-dark d-sm-none'>Deconexion</a>
+                            </div>
+                        </div> 
+
                     </div>
                 </div>
 
-                <div class="col-lg-9 bg-white">
-                    <div class='row' style='height: 600px;'>
-                        <div class='col-md-7'>
+                <div class="col-md-8 col-lg-9 bg-white">
+                    <div class='row' style=''>
+                        <div class='col-12 col-lg-7'>
                             <div class="row" id='bg-profil'>
                                 <div class='bg-profil-imgs'>
-                                    <img src="images/imfine.jpg" class="img-fluid">
+                                    <img src="images/drtt.jpg" class="img-fluid">
                                 </div>
                             </div>
                         </div>
 
-                        <div class='col-md-4'>
-                            <h5><a href="" class="nav-link text-dark">
-                                <span></span>
-                                <span></a>
-                            </h5>
+                        <div class='col-12 col-lg-5'>
+                            
+                            <h4 class='row'>
+                                <a href="" class="nav-link text-dark">
+                                    <span><?=$user->name?></span>,
+                                    <span><?=$age?></span></a>
+                            </h4>
+                            
                         </div>
                     </div>
                     <!--<div class="row">

@@ -5,7 +5,7 @@
                 <div class="row pb-5">
                     <div class="singupBox_encounters bg-light">
                         <div class="col-12" >
-                            <div class="row position-fixed" style="z-index: 10; width: 280px; height: 80px;">
+                            <div class="row">
                                 <div class="col-12 bg-light">
                                     <div class="row">
                                         <div class="mx-auto mt-4">
@@ -15,7 +15,7 @@
                                 </div>
                             </div>
 
-                            <div class="row" style="padding-top: 85px;">
+                            <!--<div class="row" style="padding-top: 85px;">
                                 <div class="col">
                                     <div class="row singin-btn1">
                                         <a class="btn mb-3 mx-auto bg-dark" href="#" role="button"><i style="margin-right: 8px;" class="fa fa-facebook-official" aria-hidden="true"></i> <small class="font-weight-bold">Facebook</small></a>
@@ -26,7 +26,7 @@
                                         <a class="btn mx-auto bg-warning" href="#" role="button"><i class="fa fa-google" aria-hidden="true"></i> <small class="font-weight-bold"></small></a>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
 
                             <?php include 'includes/message_flash.php'?>
 
@@ -43,7 +43,8 @@
                                     </div>
                                     <div class="form-group row mb-4">
                                         <div class="col-sm-4">
-                                            <select name="day" id="day" class="row form-control" style="<?= ($validate->error('day')) ? "border-color : red" : ''?>">
+                                            <div class='row'>
+                                                <select name="day" id="day" class="form-control" style="<?= ($validate->error('day')) ? "border-color : red" : ''?>">
                                                 <option>Jour...</option>
                                                 <?php for($i = 1; $i <= 31; $i++)
                                                 {
@@ -52,10 +53,12 @@
                                                     <?php
                                                 }
                                                 ?>
-                                            </select>
+                                                </select>
+                                            </div>
                                         </div>
                                         <div class="col-sm-4">
-                                            <select class="row form-control" id="month" name="month" style="<?= ($validate->error('month')) ? "border-color : red" : ''?>">
+                                            <div class='row'>
+                                                <select class="form-control" id="month" name="month" style="<?= ($validate->error('month')) ? "border-color : red" : ''?>">
                                                 <option>Mois...</option>
                                                 <?php foreach ($validate->months as $key => $month)
                                                 {
@@ -64,7 +67,8 @@
                                                     <?php
                                                 }
                                                 ?>
-                                            </select>
+                                                </select>
+                                            </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <input type="text" name="year" id="year" class="row form-control"  placeholder="Année..." value="<?= $validate->post('year')?>" pattern="^(19|20)[0-9]{2}" style="<?= ($validate->error('year')) ? "border-color : red" : ''?>"/>
@@ -122,7 +126,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-9 d-none d-sm-block datingContent bg-white" style="">
+            <div class="col-lg-9 datingContent bg-white" style="">
                 <div class="row">
                     <header class="col-12">
                         <div class="row d-none d-sm-block d-lg-none">

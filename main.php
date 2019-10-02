@@ -77,7 +77,7 @@ include 'includes/autoload_classes.php';
     <div class="container">
         <div class="row">
             <div class="col-md-10 offset-md-1 homepage">
-                <div class="row ">
+                <div class="row">
                     <div class="col-12 col-lg-6 firtFace order-last order-lg-first">
                         <div class="row">
                             <div class="col-11" >
@@ -104,6 +104,7 @@ include 'includes/autoload_classes.php';
                                     <small class="text-muted mx-auto mt-4">Nous ne publions rien sans ton consentement.</small>
                                 </div>
                             </div>
+
                             <div class="col-1 midleFace d-none d-lg-block">
                                 ou
                             </div>
@@ -141,7 +142,7 @@ include 'includes/autoload_classes.php';
                             </div>
                         </div>
 
-                        <div class="alert alert-info error-save"></div>
+                        <div class="row alert alert-info error-save"></div>
 
                         <div class="row singupPage-home py-5 pl-sm-5">
                             <div class="col-12">
@@ -210,7 +211,6 @@ include 'includes/autoload_classes.php';
                                         <div class="singin-btn-validate">
                                             <button type="submit" class="btn col-12 row text-white font-weight-bold" role="button">Créer un profil</button>
                                         </div>
-                                        <p class="mt-2 text-center"><a href="" style="color: #333;">Mot de passe oublié ?</a></p>
                                     </form>
                                 </div>
                                 <div class='row'>
@@ -228,7 +228,7 @@ include 'includes/autoload_classes.php';
                         <div class="row">
                             <a class="mx-auto" href="" title="Télécharger babor sur google play"><img src="images/googleplaylogo.png" style="width: 200px; height: 120px;"></a>
                         </div>
-                        <hr class="bg-dark">
+                        <hr class="row bg-dark">
                     </div>
 
                     <div class="col-12">

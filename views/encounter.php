@@ -9,19 +9,6 @@
                             <div class="mx-auto mt-4"><a href="index.php"><img src="images/Logo45.png" style="width: 150px; height: 30px; margin-bottom: 50px;"></a></div>
                         </div>
 
-                        <div class="row">
-                            <div class="col">
-                                <div class="row singin-btn1">
-                                    <a class="btn mb-3 mx-auto bg-dark" href="#" role="button"><i style="margin-right: 8px;" class="fa fa-facebook-official" aria-hidden="true"></i> <small class="font-weight-bold">Facebook</small></a>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="row singin-btn2">
-                                    <a class="btn mx-auto bg-warning" href="#" role="button"><i style="margin-left: -10px;" class="fa fa-google" aria-hidden="true"></i> <small class="font-weight-bold"></small></a>
-                                </div>
-                            </div>
-                        </div>
-
                         <?php include 'includes/message_flash.php'?>
 
                         <div class="row mb-4">
@@ -125,31 +112,18 @@
 
                         <div class="row">
                                 <header class="col-12">
-                                    <div class="row d-none d-sm-block d-lg-none">
+                                    <div class="row  d-lg-none">
                                         <nav class="col-12 navbar navbar-expand-sm navbar-light">
                                             <a href="index.php"><img src="images/Logo45.png" style="width: 150px; height: 30px;"></a>
 
-                                            <div class="collapse navbar-collapse">
+                                            <div class="navbar-nav">
                                                 <div class="nav-item">
-                                                    <p class="text-navbar d-none d-md-inline-block">Inscris-toi pour voir qui est autour de toi en ce moment !</p>
+                                                    <p class="text-navbar d-none d-sm-inline-block">Inscris-toi pour voir qui est autour de toi en ce moment !</p>
                                                 </div>
 
-                                                <ul class="navbar-nav ml-auto">
-                                                    <li class="nav-item">
-                                                        <a class="btn mb-3 bg-dark font-weight-bold text-white" href="singup.php" role="button"><i class="fa fa-envelope-square" aria-hidden="true"></i> Creer un profil</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <div class="">
-                                                            <a class="btn bg-dark mx-2" href="#" role="button"><i style="margin-right: 8px;" class="fa fa-facebook-official" aria-hidden="true"></i>
-                                                            </a>
-                                                        </div>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <div class="">
-                                                            <a class="btn bg-warning" href="#" role="button"><i style="margin-left: 10px; margin-right: 10px;" class="fa fa-google" aria-hidden="true"></i>
-                                                            </a>
-                                                        </div>
+                                                <ul class="nav ">
+                                                    <li class="nav-item ">
+                                                        <a class="btn mb-3 bg-dark font-weight-bold text-white" href="?view=register'" role="button"><i class="fa fa-user" aria-hidden="true"></i><span class='ml-1 d-none d-sm-inline-block'>Creer un profil</span></a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -159,10 +133,10 @@
                                     <div class="row">
                                         <nav class=" col-12 navbar navbar-expand-sm navbar-light bg-white encounter">
 
-                                            <div class="collapse navbar-collapse">
+                                            <div class="navbar nav">
                                                 <ul class="navbar-nav">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="#"><i class="fa fa-heart fa-2x" aria-hidden="true"></i></a>
+                                                        <a class="nav-link" href="?view=login"><i class="fa fa-heart fa-2x" aria-hidden="true"></i></a>
                                                     </li>
 
                                                     <li class="nav-item">
@@ -179,9 +153,9 @@
                                                             <span><?=$age?></span></a>
                                                     </h4>
                                                     <span><a href="" class="nav-link">
-                                            <span>O</span>
-                                            <span><small>Ses centre d'interets</small></span></a>
-                                        </span>
+                                                        <span>O</span>
+                                                        <span><small>Ses centre d'interets</small></span></a>
+                                                    </span>
                                                 </div>
 
                                                 <ul class="navbar-nav ml-auto">
@@ -254,20 +228,7 @@
 
                                     <ul class="navbar-nav ml-auto">
                                         <li class="nav-item">
-                                            <a class="btn mb-3 bg-dark font-weight-bold text-white" href="singup.php" role="button"><i class="fa fa-envelope-square" aria-hidden="true"></i> Creer un profil</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <div class="">
-                                                <a class="btn bg-dark mx-2" href="#" role="button"><i style="margin-right: 8px;" class="fa fa-facebook-official" aria-hidden="true"></i>
-                                                </a>
-                                            </div>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <div class="">
-                                                <a class="btn bg-warning" href="#" role="button"><i style="margin-left: 10px; margin-right: 10px;" class="fa fa-google" aria-hidden="true"></i>
-                                                </a>
-                                            </div>
+                                            <a class="btn mb-3 bg-dark font-weight-bold text-white" href="?view=register" role="button"><i class="fa fa-envelope-square" aria-hidden="true"></i> Creer un profil</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -280,7 +241,7 @@
                                 <div class="collapse navbar-collapse">
                                     <ul class="navbar-nav">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#"><i class="fa fa-heart fa-2x" aria-hidden="true"></i></a>
+                                            <a class="nav-link" href="?view=login"><i class="fa fa-heart fa-2x" aria-hidden="true"></i></a>
                                         </li>
 
                                         <li class="nav-item">
@@ -304,7 +265,7 @@
 
                                     <ul class="navbar-nav ml-auto">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#" title="Voir le profil"><i class="fa fa-user-o fa-x" aria-hidden="true"></i></a>
+                                            <a class="nav-link" href="?view=login" title="Voir le profil"><i class="fa fa-user-o fa-x" aria-hidden="true"></i></a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="#" title="Ajouter aux favoris"><i class="fa fa-star-o fa-x" aria-hidden="true"></i></a>

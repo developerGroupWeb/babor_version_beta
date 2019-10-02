@@ -84,23 +84,6 @@
 
                 </div>
             </div>
-            <div class="col-md-3 col-sm-12 box2">
-                <p class="my-4 text-center">Se connecter avec :</p>
-                <div class="row">
-                    <div class="col-md-12 col">
-                        <div class="row singin-btn1">
-                            <a class="btn mb-3 mx-auto bg-dark" href="#" role="button"><i style="margin-right: 8px;" class="fa fa-facebook-official" aria-hidden="true"></i> <small class="font-weight-bold">Facebook</small></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 col">
-                        <div class="row singin-btn2">
-                            <a class="btn mx-auto bg-warning" href="#" role="button"><i style="margin-left: -10px; margin-right: 10px;" class="fa fa-google" aria-hidden="true"></i> <small class="font-weight-bold">Google</small></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -164,25 +147,25 @@
                 </div>
                 <div class="form-check my-4">
                     <input class="form-check-input" type="checkbox" value="" id="check">
-                    <label class="form-check-label text-white" for="check">
+                    <label class="form-check-label text-dark" for="check">
                         Se souvenir de moi
                     </label>
                 </div>
-                <div class="col-10">
+                <div class="col-12">
                     <div class="row">
                         <div class='mx-auto'>
                             <button type="submit" name="login" class="btn btn-primary px-5 font-weight-bold" role="button">Se connecter</button>
                         </div>
                     </div>
                 </div>
-                <p class="mx-auto text-center p-2"><a href="?view=password_forget" style="color: #b6b6b6;">Mot de passe oublié ?</a></p>
+                <p class="text-center p-2"><a href="?view=password_forget" style="color: #b6b6b6;">Mot de passe oublié ?</a></p>
             </form>
         </div>
 
-        <div class="row">
+        <!--<div class="row">
             <a href="index.php"><div class="mx-auto bg-light px-3 py-1 rounded-circle go-backHome"><a href="index.php"><i class="fa fa-angle-left fa-2x" aria-hidden="true"></i></div></a></a>
 
-        </div>
+        </div>-->
     </div>
 </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

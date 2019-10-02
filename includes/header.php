@@ -46,7 +46,7 @@ include 'url_path.php';
     <!--navbar on tablette-->
     <div class="d-none d-sm-block d-md-none">
         <nav class="navbar navbar-expand  font-weight-bold">
-            <a class="navbar-brand" href="index.php" style="color: #fff;"><img src="images/Logo45.png"></a>
+            <a class="navbar-brand" href="index.php"><img src="images/Logo45.png"></a>
 
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">

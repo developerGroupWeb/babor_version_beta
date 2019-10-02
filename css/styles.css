@@ -227,7 +227,7 @@ box-shadow: 2px 18px 27px -12px rgba(0,0,0,0.75);
 	background-color: rgb(70, 69, 69);
 }
 
-#bg-profil .bg-profil-imgs{
+#bg-profil .bg-profil-imgs img{
 	margin: 0;
 	position: absolute;
 	top: 50%;
